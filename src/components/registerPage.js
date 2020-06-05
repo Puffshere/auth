@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, browserHistory } from 'react-router';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { registerUserAction } from '../actions/authenticationActions';
@@ -19,6 +19,10 @@ class RegisterPage extends Component {
     this.props.dispatch(registerUserAction(data));
   }
 
+  componentDidMount() {
+    document.title = 'React Login';
+  }
+
   render() {
     let message, isSuccess;
 
@@ -30,19 +34,19 @@ class RegisterPage extends Component {
     return (
       <div>
         <h3>RegisterPage</h3>
-        {!isSuccess ? <div>{message}</div> : browserHistory.push('login')}
+        {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
         <form onSubmit={this.onHandleRegistration}>
           <div>
-            <label>Name</label>
-            <input type="text" name="name" />
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name" />
           </div>
           <div>
-            <label>Email</label>
-            <input type="email" name="email" />
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" />
           </div>
           <div>
-            <label>Password</label>
-            <input type="password" name="password" />
+            <label htmlFor="password">Password</label>
+            <input type="password" name="password" id="password" />
           </div>
           <div>
             <button>Register</button>

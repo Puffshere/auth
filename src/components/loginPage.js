@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Link, browserHistory } from 'react-router';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { loginUserAction } from '../actions/authenticationActions';
+import { setCookie } from '../utils/cookies';
 
 class LoginPage extends Component {
   onHandleLogin = (event) => {
@@ -18,6 +19,10 @@ class LoginPage extends Component {
     this.props.dispatch(loginUserAction(data));
   }
 
+  componentDidMount() {
+    document.title = 'React Login';
+  }
+
   render() {
     let isSuccess, message;
 
@@ -26,23 +31,22 @@ class LoginPage extends Component {
       message = this.props.response.login.response.message;
       
       if (isSuccess) {
-        localStorage.removeItem('token');
-        localStorage.setItem('token', this.props.response.login.response.token);
+        setCookie('token', this.props.response.login.response.token, 1);
       }
     }
 
     return (
       <div>
         <h3>Login Page</h3>
-        {!isSuccess ? <div>{message}</div> : browserHistory.push('dashboard')}
+        {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
         <form onSubmit={this.onHandleLogin}>
           <div>
-            <label>Email</label>
-            <input type="email" name="email" />
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" />
           </div>
           <div>
-            <label>Password</label>
-            <input type="password" name="password" />
+            <label htmlFor="password">Password</label>
+            <input type="password" name="password" id="password" />
           </div>
           <div>
             <button>Login</button>
