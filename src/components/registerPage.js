@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import './../App.css';
 
 import { registerUserAction } from '../actions/authenticationActions';
 
@@ -32,7 +33,7 @@ class RegisterPage extends Component {
     }
     
     return (
-      <div>
+      <div className="registerPage">
         <h3>RegisterPage</h3>
         {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
         <form onSubmit={this.onHandleRegistration}>
