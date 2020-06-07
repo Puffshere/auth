@@ -50,3 +50,7 @@
 body {
   background-color: rgb(138, 138, 153);
 }
+
+.dashboard {
+  text-align: center;
+}

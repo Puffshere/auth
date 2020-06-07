@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 class DashboardPage extends Component {
   render() {
     return (
-      <div>
-        Dashboard
+      <div className='dashboard'>
+        <h1 className='loginPageTitle'>BladeX</h1>
+        <h3>Dashboard</h3>
       </div>
     );
   }
