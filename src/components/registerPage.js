@@ -34,26 +34,32 @@ class RegisterPage extends Component {
     
     return (
       <div className="registerPage">
+        <h1 className='loginPageTitle'>BladeX</h1>
         <h3>RegisterPage</h3>
         {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
         <form onSubmit={this.onHandleRegistration}>
+          <br></br>
           <div>
             <label htmlFor="name">Name</label>
             <input type="text" name="name" id="name" />
           </div>
+          <br></br>
           <div>
             <label htmlFor="email">Email</label>
             <input type="email" name="email" id="email" />
           </div>
+          <br></br>
           <div>
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" />
           </div>
+          <br></br>
           <div>
             <button>Register</button>
           </div>
+          <br></br>
         </form>
-        Already have account? <Link to='login'>Login here</Link>
+        Already have account? <Link className='linkColor' to='login'>Login here</Link>
       </div>
     )
   }

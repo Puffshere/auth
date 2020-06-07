@@ -36,23 +36,28 @@ class LoginPage extends Component {
     }
 
     return (
-      <div>
+      <div className='loginPage'>
+        <h1 className='loginPageTitle'>BladeX</h1>
         <h3>Login Page</h3>
         {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
         <form onSubmit={this.onHandleLogin}>
+          <br></br>
           <div>
             <label htmlFor="email">Email</label>
             <input type="email" name="email" id="email" />
           </div>
+          <br></br>
           <div>
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="password" />
           </div>
+          <br></br>
           <div>
             <button>Login</button>
           </div>
+          <br></br>
         </form>
-        Don't have account? <Link to='register'>Register here</Link>
+        Don't have account? <Link className='linkColor' to='register'>Register here</Link>
       </div>
     );
   }

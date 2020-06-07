@@ -32,9 +32,21 @@
 }
 
 .registerPage {
-  background-color: aqua;
+  text-align: center;
+}
+
+.loginPage {
+  text-align: center;
+}
+
+.loginPageTitle {
+  text-shadow: 2px 2px 2px white;
+}
+
+.linkColor {
+  color: #61dafb;
 }
 
 body {
-  background-color: blue;
+  background-color: rgb(138, 138, 153);
 }
