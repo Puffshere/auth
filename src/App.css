@@ -60,3 +60,12 @@ body {
   background-color: rgb(124, 85, 85);
   box-shadow: 2px 2px 2px rgb(194, 188, 188);
 }   
+
+.dashboardTableStyling {
+  box-shadow: 2px 2px 2px white;
+  margin: auto;
+}
+
+.dashboardTableHeadStyling {
+  box-shadow: 2px 2px 2px cyan;
+}
