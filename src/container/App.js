@@ -9,6 +9,7 @@ import PrivateRoute from './privateRoute';
 import LoginPage from '../components/loginPage';
 import RegisterPage from '../components/registerPage';
 import DashboardPage from '../components/dashboardPage';
+import YourKnifePage from '../components/yourKnifePage';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path='/login' component={LoginPage} />
             <Route path='/register' component={RegisterPage} />
             <PrivateRoute path='/dashboard' component={DashboardPage} />
+            <PrivateRoute path='/yourknives' component={YourKnifePage} />
           </Switch>
         </div>
       </BrowserRouter>
