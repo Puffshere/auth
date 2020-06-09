@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { loginUserAction } from '../actions/authenticationActions';
-import { setCookie } from '../utils/cookies';
 
 const CurrentDate = (props) => {
     return (
@@ -15,11 +11,15 @@ const CurrentDate = (props) => {
 const Table = () => {
     return (
         <table className='dashboardTableStyling'>
-            <th className='dashboardTableHeadStyling'>Your Knives</th>
-            <th className='dashboardTableHeadStyling'>For Sale</th>
+            <th className='dashboardTableHeadStyling'><h3>Your Knives</h3></th>
+            {/* <th className='dashboardTableHeadStyling'>For Sale</th>
             <th className='dashboardTableHeadStyling'>EDC Rotation</th>
-            <th className='dashboardTableHeadStyling'>Wish List</th>
-            <Link className='linkColor' to='register'>Register here</Link>
+        <th className='dashboardTableHeadStyling'>Wish List</th> */}
+        <tr>Fixed Blades</tr>
+        <tr>Automatic</tr>
+        <tr>Flippers</tr>
+        <tr>Slip Joints</tr>
+        <tr>Assisted</tr>
         </table>
     )
 }
@@ -35,21 +35,12 @@ const User = (props) => {
 class YourKnifePage extends Component {
     render(
     ) {
-        let isSuccess, message;
-
-        if (this.props.response.login.hasOwnProperty('response')) {
-            isSuccess = this.props.response.login.response.success;
-            message = this.props.response.login.response.message;
-
-            if (isSuccess) {
-                setCookie('token', this.props.response.login.response.token, 1);
-            }
-        }
+      
         return (
             <div className='dashboard'>
-                {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
+                
                 <h1 className='loginPageTitle'>BladeX</h1>
-                <h3 className='dashboardTitle'>Dashboard</h3>
+                <h3 className='dashboardTitle'>Your Knives</h3>
                 <CurrentDate date={Date()} />
                 <User user={this.props.name} />
                 <Table className='tableStyling' />

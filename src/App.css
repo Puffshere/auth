@@ -70,3 +70,8 @@ body {
   box-shadow: 2px 2px 2px cyan;
 }
   
+.dashboardLinkStyling {
+  text-decoration: none;
+  color: #61dafb;
+  cursor: pointer;
+}

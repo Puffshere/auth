@@ -15,11 +15,10 @@ const CurrentDate = (props) => {
 const Table = () => {
   return (
     <table className='dashboardTableStyling'>
-      <th className='dashboardTableHeadStyling'>Your Knives</th>
+      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='yourKnives'>Your Knives</Link></th>
       <th className='dashboardTableHeadStyling'>For Sale</th>
       <th className='dashboardTableHeadStyling'>EDC Rotation</th>
       <th className='dashboardTableHeadStyling'>Wish List</th> 
-      <Link className='linkColor' to='login'>Sign out</Link>
     </table>
   )
 }
