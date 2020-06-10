@@ -16,8 +16,8 @@ const Table = () => {
   return (
     <table className='dashboardTableStyling'>
       <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='yourKnives'>Your Knives</Link></th>
-      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='forsale'>For Sale</Link></th>
-      <th className='dashboardTableHeadStyling'>EDC Rotation</th>
+      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></th>
+      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></th>
       <th className='dashboardTableHeadStyling'>Wish List</th> 
     </table>
   )

@@ -11,6 +11,7 @@ import RegisterPage from '../components/registerPage';
 import DashboardPage from '../components/dashboardPage';
 import YourKnifePage from '../components/yourKnifePage';
 import ForSalePage from '../components/forSalePage';
+import EDCRotationPage from '../components/edcRotationPage';
 
 class App extends Component {
   render() {
@@ -23,7 +24,9 @@ class App extends Component {
             <Route path='/register' component={RegisterPage} />
             <PrivateRoute path='/dashboard' component={DashboardPage} />
             <PrivateRoute path='/yourKnives' component={YourKnifePage} />
-            <PrivateRoute path='/forsale' component={ForSalePage} />
+            <PrivateRoute path='/forSale' component={ForSalePage} />
+            <PrivateRoute path='/edcRotation' component={EDCRotationPage} />
+            <PrivateRoute path='/' component={ForSalePage} />
           </Switch>
         </div>
       </BrowserRouter>
