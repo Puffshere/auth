@@ -18,7 +18,7 @@ const Table = () => {
       <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='yourKnives'>Your Knives</Link></th>
       <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></th>
       <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></th>
-      <th className='dashboardTableHeadStyling'>Wish List</th> 
+      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></th>
     </table>
   )
 }

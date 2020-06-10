@@ -12,6 +12,7 @@ import DashboardPage from '../components/dashboardPage';
 import YourKnifePage from '../components/yourKnifePage';
 import ForSalePage from '../components/forSalePage';
 import EDCRotationPage from '../components/edcRotationPage';
+import WishListPage from '../components/wishListPage';
 
 class App extends Component {
   render() {
@@ -26,7 +27,7 @@ class App extends Component {
             <PrivateRoute path='/yourKnives' component={YourKnifePage} />
             <PrivateRoute path='/forSale' component={ForSalePage} />
             <PrivateRoute path='/edcRotation' component={EDCRotationPage} />
-            <PrivateRoute path='/' component={ForSalePage} />
+            <PrivateRoute path='/wishList' component={WishListPage} />
           </Switch>
         </div>
       </BrowserRouter>
