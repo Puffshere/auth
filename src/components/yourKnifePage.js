@@ -21,7 +21,7 @@ const Table = () => {
         <tr>Slip Joints</tr>
         <tr>Assisted</tr>
         </table>
-    )
+    )    
 }
 
 const User = (props) => {
