@@ -14,17 +14,17 @@ class LoginPage extends Component {
     const data = {
       email, password
     };
-
     this.props.dispatch(loginUserAction(data));
+    console.log(data.email);
   }
-
+  
   componentDidMount() {
     document.title = 'React Login';
   }
-
+  
   render() {
     let isSuccess, message;
-
+    
     if (this.props.response.login.hasOwnProperty('response')) {
       isSuccess = this.props.response.login.response.success;
       message = this.props.response.login.response.message;
@@ -33,7 +33,7 @@ class LoginPage extends Component {
         setCookie('token', this.props.response.login.response.token, 1);
       }
     }
-
+    
     return (
       <div className='loginPage'>
         <h1 className='loginPageTitle'>BladeX</h1>

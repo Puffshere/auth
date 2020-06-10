@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from '../components/search';
 
 const CurrentDate = (props) => {
     return (
@@ -43,6 +44,7 @@ class YourKnifePage extends Component {
                 <h3 className='dashboardTitle'>Your Knives</h3>
                 <CurrentDate date={Date()} />
                 <User user={this.props.name} />
+                <Search/>
                 <Table className='tableStyling' />
             </div>
         );
