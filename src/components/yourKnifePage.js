@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from '../components/search';
+import FixedBladesList from '../components/fixedBladesList';
 
 const CurrentDate = (props) => {
     return (
@@ -17,6 +18,9 @@ const Table = () => {
             <th className='dashboardTableHeadStyling'>EDC Rotation</th>
         <th className='dashboardTableHeadStyling'>Wish List</th> */}
         <tr>Fixed Blades</tr>
+        <p>
+            <FixedBladesList fixedList='SpyderCo, BenchMade' />
+        </p>
         <tr>Automatic</tr>
         <tr>Flippers</tr>
         <tr>Slip Joints</tr>
