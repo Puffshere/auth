@@ -13,11 +13,10 @@ const CurrentDate = (props) => {
 const Table = () => {
     return (
         <table className='dashboardTableStyling'>
-            <th className='dashboardTableHeadStyling'><h3>Your Knives</h3></th>
+            <tr className='dashboardTableHeadStyling'><h3>Your Knives</h3></tr>
             {/* <th className='dashboardTableHeadStyling'>For Sale</th>
             <th className='dashboardTableHeadStyling'>EDC Rotation</th>
         <th className='dashboardTableHeadStyling'>Wish List</th> */}
-        <tr>Fixed Blades</tr>
         <p>
             <FixedBladesList fixedList='SpyderCo, BenchMade' />
         </p>
