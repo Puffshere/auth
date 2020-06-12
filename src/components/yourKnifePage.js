@@ -49,7 +49,7 @@ class YourKnifePage extends Component {
                 <CurrentDate date={Date()} />
                 <User user={this.props.name} />
                 <Search/>
-                <Table className='tableStyling' />
+                <Table />
             </div>
         );
     }

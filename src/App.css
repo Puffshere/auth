@@ -76,3 +76,13 @@ body {
   color: #0f2227;
   cursor: pointer;
 }
+
+.fixedBladeBorder {
+  border: 1px 1px 1px black;
+}
+
+.tableStyling {
+  border: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgb(184, 184, 236);
+  box-shadow: 2px 2px 2px rgb(80, 77, 77);
+}
