@@ -8,21 +8,51 @@ const CurrentDate = (props) => {
     );
 };
 
-class ForSalePage extends Component {
-    render(
-    ) {
-      
-        return (
-            <div className='dashboard'>
-                
-                <h1 className='loginPageTitle'>BladeX</h1>
+class ForSalePage extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        knives: [
+          {
+            model: 'Bugout',
+            forSale: true
+          },
+          {
+            model: '940',
+            forSale: false
+          },
+          {
+            model: 'Atmos',
+            forSale: true
+          },
+          {
+            model: 'Sebenza21',
+            forSale: false
+          },
+          {
+            model: 'Griptilian',
+            forSale: true
+          },
+          {
+            model: 'Leek',
+            forSale: true
+          }
+        ]
+      }
+    }
+    render() {
+      const modelForSale = this.state.knives.filter(i => i.forSale == true);
+      const renderOnline = modelForSale.map((i) => <div key={i.model + 1}>{i.model}</div>);
+      return (
+         <div className='dashboard'>
+             <h1 className='loginPageTitle'>BladeX</h1>
                 <h3 className='dashboardTitle'>For Sale</h3>
                 <CurrentDate date={Date()} />
-                {/* <User user={this.props.name} /> */}
-                {/* <Table className='tableStyling' /> */}
-            </div>
-        );
+           <h1>Current Knives for Sale</h1>
+             {renderOnline}
+         </div>
+      );
     }
-}
+  };
 
 export default ForSalePage;

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Search from '../components/search';
 import FixedBladesList from '../components/fixedBladesList';
-import AddKnifeForm from './addKnifeForm';
+import AddKnifeForm from '../components/addKnifeForm';
+
 
 const CurrentDate = (props) => {
     return (
@@ -16,10 +17,8 @@ class Table extends React.Component {
         super(props);
         this.state = {
             input: '',
-            brand: '',
         };
     }
-
     render() {
         return (
             <table className='dashboardTableStyling'>
@@ -39,7 +38,7 @@ class Table extends React.Component {
 const User = (props) => {
     return (
         <div>
-            <p>Welcome {props.brand}</p>
+            <p>Welcome {props.name}</p>
         </div>
     );
 };
@@ -48,11 +47,25 @@ class YourKnifePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            inputValue: '',
             input: '',
             brand: '',
+            visibility: false,
+            inputModel: '',
+            model: '',
+            pricePaid: 0,
+            wouldSalePrice: 0,
+            listForSale: false,
+            brandArray: '',
+            modelArray: '',
         };
+        this.handleChange = this.handleChange.bind(this);
     }
-
+    handleChange(event) {
+        this.setState({
+            inputValue: event.target.value
+        });
+    }
     render() {
         return (
             <div className='dashboard'>
@@ -62,10 +75,42 @@ class YourKnifePage extends React.Component {
                 <User user={this.props.name} />
                 <Search />
                 <AddKnifeForm />
+                {/* <GetInput handleChange={this.handleChange} input={this.state.inputValue} />
+                <RenderInput input={this.state.inputValue} /> */}
                 <Table />
             </div>
         );
     }
 }
+
+class GetInput extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <h3>Get Input:</h3>
+                <input
+                    value={this.props.input}
+                    onChange={this.props.handleChange} />
+            </div>
+        );
+    }
+};
+
+class RenderInput extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <h3>Input Render:</h3>
+                <p>{this.props.input}</p>
+            </div>
+        );
+    }
+};
 
 export default YourKnifePage;

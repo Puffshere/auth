@@ -23,27 +23,27 @@ class AddKnifeForm extends React.Component {
 
     handleChange(event) {
         this.setState({
-          input: event.target.value,
-          
+            input: event.target.value,
+
         });
-      }
+    }
     handleChange1(event) {
         this.setState({
-          inputModel: event.target.value,
+            inputModel: event.target.value,
         });
-      }
+    }
 
-      handleSubmit(event) {
+    handleSubmit(event) {
         event.preventDefault()
         this.setState({
-          brand: this.state.input,
-          model: this.state.inputModel,
-          brandArray: this.state.input + this.state.brandArray,
-          modelArray: this.state.inputModel + this.state.modelArray,
-          input: '',
-          inputModel: '',
+            brand: this.state.input,
+            model: this.state.inputModel,
+            brandArray: this.state.input + this.state.brandArray,
+            modelArray: this.state.inputModel + this.state.modelArray,
+            input: '',
+            inputModel: '',
         });
-      }
+    }
 
     toggleVisibility() {
         this.setState(state => ({
@@ -52,6 +52,7 @@ class AddKnifeForm extends React.Component {
     }
 
     render() {
+        
         if (this.state.visibility) {
             return (
                 <div>
@@ -63,6 +64,7 @@ class AddKnifeForm extends React.Component {
                         {/* <input>Would Sale Price</input> */}
                         <button type='submit'>Submit</button>
                     </form>
+                    {/* { this.state.visibility && <h1>Hello my friend!</h1> } */}
                 </div>
             );
         } else {
