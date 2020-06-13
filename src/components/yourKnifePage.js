@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Search from '../components/search';
 import FixedBladesList from '../components/fixedBladesList';
+import AddKnifeForm from './addKnifeForm';
 
 const CurrentDate = (props) => {
     return (
@@ -15,7 +16,7 @@ const Table = () => {
         <table className='dashboardTableStyling'>
             <tr className='dashboardTableHeadStyling'><h3>Select Category</h3></tr>
         <p>
-            <FixedBladesList fixedList='SpyderCo, BenchMade' />
+            <FixedBladesList fixedList={'SpyderCo, BenchMade'} />
         </p>
         <tr>Automatic</tr>
         <tr>Flippers</tr>
@@ -39,12 +40,12 @@ class YourKnifePage extends Component {
       
         return (
             <div className='dashboard'>
-                
                 <h1 className='loginPageTitle'>BladeX</h1>
                 <h3 className='dashboardTitle'>Your Knives</h3>
                 <CurrentDate date={Date()} />
                 <User user={this.props.name} />
                 <Search/>
+                <AddKnifeForm />
                 <Table />
             </div>
         );
