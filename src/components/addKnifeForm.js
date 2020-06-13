@@ -13,6 +13,7 @@ class AddKnifeForm extends React.Component {
             wouldSalePrice: 0,
             listForSale: false,
             brandArray: '',
+            modelArray: '',
         };
         this.toggleVisibility = this.toggleVisibility.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -38,6 +39,7 @@ class AddKnifeForm extends React.Component {
           brand: this.state.input,
           model: this.state.inputModel,
           brandArray: this.state.input + this.state.brandArray,
+          modelArray: this.state.inputModel + this.state.modelArray,
           input: '',
           inputModel: '',
         });
@@ -67,7 +69,7 @@ class AddKnifeForm extends React.Component {
             return (
                 <div>
                     <button className='dashboardLinkStyling' onClick={this.toggleVisibility}>Add a Knife</button>
-                    <p>{this.state.brandArray} {this.state.model}</p>
+                    <p>{this.state.brandArray} {this.state.modelArray}</p>
                 </div>
             );
         }
