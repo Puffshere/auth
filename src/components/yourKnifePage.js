@@ -15,15 +15,15 @@ const Table = () => {
     return (
         <table className='dashboardTableStyling'>
             <tr className='dashboardTableHeadStyling'><h3>Select Category</h3></tr>
-        <p>
-            <FixedBladesList fixedList={'SpyderCo, BenchMade'} />
-        </p>
-        <tr>Automatic</tr>
-        <tr>Flippers</tr>
-        <tr>Slip Joints</tr>
-        <tr>Assisted</tr>
+            <p>
+                <FixedBladesList fixedList={'SpyderCo, BenchMade'} />
+            </p>
+            <tr>Automatic</tr>
+            <tr>Flippers</tr>
+            <tr>Slip Joints</tr>
+            <tr>Assisted</tr>
         </table>
-    )    
+    )
 }
 
 const User = (props) => {
@@ -37,14 +37,14 @@ const User = (props) => {
 class YourKnifePage extends Component {
     render(
     ) {
-      
+
         return (
             <div className='dashboard'>
                 <h1 className='loginPageTitle'>BladeX</h1>
                 <h3 className='dashboardTitle'>Your Knives</h3>
                 <CurrentDate date={Date()} />
                 <User user={this.props.name} />
-                <Search/>
+                <Search />
                 <AddKnifeForm />
                 <Table />
             </div>
