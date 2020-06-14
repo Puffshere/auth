@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Checkbox from '../components/checkbox'
 
 class AddKnifeForm extends React.Component {
     constructor(props) {
@@ -14,7 +15,9 @@ class AddKnifeForm extends React.Component {
             listForSale: false,
             brandArray: '',
             modelArray: '',
+            checked: false,
         };
+        // state = { checked: false }
         this.toggleVisibility = this.toggleVisibility.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleChange1 = this.handleChange1.bind(this);
@@ -51,15 +54,30 @@ class AddKnifeForm extends React.Component {
         }));
     }
 
+    handleCheckboxChange = event => {
+        this.setState({ checked: event.target.checked })
+    }
+
     render() {
-        
+
         if (this.state.visibility) {
             return (
                 <div>
+                    <div style={{ fontFamily: 'system-ui' }}>
+                        <label>
+                            <Checkbox
+                                checked={this.state.checked}
+                                onChange={this.handleCheckboxChange}
+                            />
+                            <span style={{ marginLeft: 8 }}>Label Text</span>
+                        </label>
+                    </div>
                     <button className='dashboardLinkStyling' onClick={this.toggleVisibility}>Finished</button>
                     <form onSubmit={this.handleSubmit}>
                         <input value={this.state.input} placeholder='Brand' onChange={this.handleChange} />
                         <input value={this.state.inputModel} placeholder='Model' onChange={this.handleChange1} />
+                        <Checkbox />
+                        <Checkbox />
                         {/* <input>Price Paid</input> */}
                         {/* <input>Would Sale Price</input> */}
                         <button type='submit'>Submit</button>
