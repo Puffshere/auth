@@ -27,7 +27,7 @@ const User = (props) => {
   return (
     <div>
       <p>Welcome {props.name}</p>
-      //console.log(state);
+      {/* console.log(state); */}
     </div>
   );  
 };
