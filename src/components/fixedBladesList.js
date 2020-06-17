@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 
 class FixedBladesList extends React.Component {
   constructor(props) {
@@ -26,14 +26,14 @@ class FixedBladesList extends React.Component {
     if (this.state.visibility) {
       return (
         <div>
-          <a className='dashboardLinkStyling' onClick={this.toggleVisibility}>Fixed Blades</a>
+          <button className='dashboardLinkStyling' onClick={this.toggleVisibility}>Fixed Blades</button>
           <p>Your Fixed blades are: <strong>{this.props.fixedList}</strong></p>
         </div>
       );
     } else {
       return (
         <div>
-          <a className='dashboardLinkStyling' onClick={this.toggleVisibility}>Fixed Blades</a>
+          <button className='dashboardLinkStyling' onClick={this.toggleVisibility}>Fixed Blades</button>
         </div>
       );
     }

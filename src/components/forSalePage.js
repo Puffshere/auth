@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 
 const CurrentDate = (props) => {
     return (
@@ -41,7 +41,7 @@ class ForSalePage extends React.Component {
       }
     }
     render() {
-      const modelForSale = this.state.knives.filter(i => i.forSale == true);
+      const modelForSale = this.state.knives.filter(i => i.forSale === true);
       const renderOnline = modelForSale.map((i) => <div key={i.model + 1}>{i.model}</div>);
       return (
          <div className='dashboard'>

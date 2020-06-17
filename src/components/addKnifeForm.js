@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 import Checkbox from '../components/checkbox'
 
 class AddKnifeForm extends React.Component {

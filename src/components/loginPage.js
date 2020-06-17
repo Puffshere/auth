@@ -18,7 +18,7 @@ class LoginPage extends Component {
     console.log(data.email);
   }
   
-  componentDidMount() {
+  UNSAFE_componentDidMount() {
     document.title = 'React Login';
   }
   

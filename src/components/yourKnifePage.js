@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 import Search from '../components/search';
 import FixedBladesList from '../components/fixedBladesList';
 import AddKnifeForm from '../components/addKnifeForm';
@@ -22,14 +22,16 @@ class Table extends React.Component {
     render() {
         return (
             <table className='dashboardTableStyling'>
-                <tr className='dashboardTableHeadStyling'><h3>Select Category</h3></tr>
-                <p>
+                <tbody>
+                <tr className='dashboardTableHeadStyling'>Select Category</tr>
+                
                     <FixedBladesList fixedList={'SpyderCo, BenchMade'} />
-                </p>
+                
                 <tr>Automatic</tr>
                 <tr>Flippers</tr>
                 <tr>Slip Joints</tr>
                 <tr>Assisted</tr>
+                </tbody>
             </table>
         )
     }
@@ -83,34 +85,34 @@ class YourKnifePage extends React.Component {
     }
 }
 
-class GetInput extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <div>
-                <h3>Get Input:</h3>
-                <input
-                    value={this.props.input}
-                    onChange={this.props.handleChange} />
-            </div>
-        );
-    }
-};
+// class GetInput extends React.Component {
+//     constructor(props) {
+//         super(props);
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <h3>Get Input:</h3>
+//                 <input
+//                     value={this.props.input}
+//                     onChange={this.props.handleChange} />
+//             </div>
+//         );
+//     }
+// };
 
-class RenderInput extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <div>
-                <h3>Input Render:</h3>
-                <p>{this.props.input}</p>
-            </div>
-        );
-    }
-};
+// class RenderInput extends React.Component {
+//     constructor(props) {
+//         super(props);
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <h3>Input Render:</h3>
+//                 <p>{this.props.input}</p>
+//             </div>
+//         );
+//     }
+// };
 
 export default YourKnifePage;

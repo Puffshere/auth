@@ -27,6 +27,7 @@ const User = (props) => {
   return (
     <div>
       <p>Welcome {props.name}</p>
+      //console.log(state);
     </div>
   );  
 };
@@ -45,17 +46,19 @@ class DashboardPage extends Component {
     this.props.dispatch(loginUserAction(data));
   }
 
-  componentDidMount() {
+  UNSAFE_componentDidMount() {
     document.title = 'React Login';
   }
 
 
   render() {
-    let isSuccess, message;
+    let isSuccess;
+    //message
+    
 
     if (this.props.response.login.hasOwnProperty('response')) {
       isSuccess = this.props.response.login.response.success;
-      message = this.props.response.login.response.message;
+      // message = this.props.response.login.response.message;
       
       if (isSuccess) {
         setCookie('token', this.props.response.login.response.token, 1);

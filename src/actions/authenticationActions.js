@@ -13,3 +13,10 @@ export const loginUserAction = (user) => {
     user
   }
 };
+
+export const addKnifeAction = (knife) => {
+  return {
+    type: types.ADD_KNIFE,
+    knife
+  }
+};

@@ -20,7 +20,7 @@ class RegisterPage extends Component {
     this.props.dispatch(registerUserAction(data));
   }
 
-  componentDidMount() {
+  UNSAFE_componentDidMount() {
     document.title = 'React Login';
   }
 
