@@ -41,6 +41,8 @@ body {
 
 .dashboardTableStyling {
   margin: auto;
+  background-color: floralwhite;
+  width: 100%;
 }
 
 .dashboardTableHeadStyling {
@@ -60,3 +62,19 @@ body {
   box-shadow: 0px 2px 0px 0px rgb(80, 77, 77);
 }
 
+.column1 {
+width: 10px;
+height: 100%;
+color: black;
+}
+
+.column2 {
+  width: 10px;
+  height: 100%;
+  color: black;
+}
+
+.dateStyling {
+  background-color: #a19494;
+  margin-top: -11px;
+}

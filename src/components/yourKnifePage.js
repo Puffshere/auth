@@ -10,7 +10,7 @@ const CurrentDate = (props) => {
     const currDate = date;
     return (
       <div>
-        <p>The current date is: {currDate}</p>
+        <p>{currDate}</p>
       </div>
     );
   };

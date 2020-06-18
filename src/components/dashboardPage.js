@@ -8,29 +8,27 @@ const CurrentDate = (props) => {
   var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
   const currDate = date;
   return (
-    <div>
-      <p>The current date is: {currDate}</p>
-    </div>
+      <div className='dateStyling'>{currDate}</div>
   );
 };
 
-const User = (props) => {
-  return (
-    <div>
-      <p>Welcome {props.email}</p>
-    </div>
-  );
-};
+// const User = (props) => {
+//   return (
+//     <div>
+//       <p>Welcome {props.email}</p>
+//     </div>
+//   );
+// };
 
 const Table = () => {
   return (
     <div>
       <table className='dashboardTableStyling'>
         <tbody>
-          <tr><td><Link className='dashboardLinkStyling' to='yourKnives'>Your Knives</Link></td></tr>
-          <tr><td><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td></tr>
-          <tr><td><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td></tr>
-          <tr><td><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td></tr>
+          <tr><td><Link className='dashboardLinkStyling' to='yourKnives'>Your Knives</Link></td>
+          <td><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
+          <td><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
+          <td><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td></tr>
         </tbody>
       </table>
     </div>
@@ -75,11 +73,17 @@ class DashboardPage extends Component {
     return (
       <div className='dashboard'>
         {!isSuccess ? <div></div> : <Redirect to='dashboard' />}
+        <div className='column1'>
+          
         <h1 className='loginPageTitle'>BladeX</h1>
-        <h3 className='dashboardTitle'>Dashboard</h3>
+        <div className='dateStyling'>
         <CurrentDate date={Date()} />
-        <User user={this.props.email} />
+        </div>
+        <h3 className='dashboardTitle'>Dashboard</h3>
+        {/* <User user={this.props.email} /> */}
+        </div>
         <Table className='tableStyling' />
+        <div className='column2'></div>
       </div>
     );
   }
