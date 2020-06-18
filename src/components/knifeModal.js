@@ -20,13 +20,14 @@ class KnifeModal extends Component {
         this.props.dispatch(addKnifeAction(knifeData));
         console.log(knifeData.handleMaterial);
     }
-    // UNSAFE_componentDidMount() {
-    //     document.title = 'Knife Modal';
-    //   }
+    UNSAFE_componentDidMount() {
+        document.title = 'Knife Modal';
+      }
+      
       render() {
           return(
               <div>
-                  <div className='loginPageTitle'>Add A Knife:</div>
+                  <div className='modalTitleStyling'>Add A Knife:</div>
                    <form onSubmit={this.onHandleSave}>
           <br></br>
           <div>

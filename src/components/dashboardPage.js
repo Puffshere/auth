@@ -14,70 +14,74 @@ const CurrentDate = (props) => {
 
 const Table = () => {
   return (
-    <table className='dashboardTableStyling'>
-      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='yourKnives'>Your Knives</Link></th>
-      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></th>
-      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></th>
-      <th className='dashboardTableHeadStyling'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></th>
-    </table>
+    <div>
+      <table className='dashboardTableStyling'>
+        <tbody>
+          <tr><td><Link className='dashboardLinkStyling' to='yourKnives'>Your Knives</Link></td></tr>
+          <tr><td><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td></tr>
+          <tr><td><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td></tr>
+          <tr><td><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td></tr>
+        </tbody>
+      </table>
+    </div>
   )
 }
 
 const User = (props) => {
   return (
     <div>
-      <p>Welcome {props.name}</p>
+      <p>Welcome {props.email}</p>
       {/* console.log(state); */}
     </div>
-  );  
+  );
 };
 
 class DashboardPage extends Component {
   onHandleLogin = (event) => {
     event.preventDefault();
 
-    let email = event.target.email.value;
-    let password = event.target.password.value;
+    // let email = event.target.email.value;
+    // let password = event.target.password.value;
 
-    const data = {
-      email, password
-    };
+    // const data = {
+    //   email, password
+    // };
 
-    this.props.dispatch(loginUserAction(data));
+    // this.props.dispatch(loginUserAction(data));
   }
 
-  // UNSAFE_componentDidMount() {
-  //   document.title = 'React Login';
-  // }
+  UNSAFE_componentDidMount() {
+    document.title = 'React Login';
+  }
 
 
   render() {
     let isSuccess;
     //message
-    
+
 
     if (this.props.response.login.hasOwnProperty('response')) {
       isSuccess = this.props.response.login.response.success;
       // message = this.props.response.login.response.message;
-      
+
       if (isSuccess) {
         setCookie('token', this.props.response.login.response.token, 1);
       }
     }
-  
+
 
     return (
       <div className='dashboard'>
-         {!isSuccess ? <div></div> : <Redirect to='dashboard' />}
+        {!isSuccess ? <div></div> : <Redirect to='dashboard' />}
         <h1 className='loginPageTitle'>BladeX</h1>
         <h3 className='dashboardTitle'>Dashboard</h3>
-        <CurrentDate date={Date()}/>
-        <User user={this.props.name}/>
+        <CurrentDate date={Date()} />
+        <User user={this.props.email} />
         <Table className='tableStyling' />
       </div>
     );
   }
 }
 
-const mapStateToProps = (response) => ({response});
+const mapStateToProps = (response) => ({ response });
 export default connect(mapStateToProps)(DashboardPage); 

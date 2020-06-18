@@ -40,9 +40,9 @@ class Search extends React.Component {
     //     });
     // };
   
-    // UNSAFE_componentWillMount() {
-    //   this.getData();
-    // }
+    UNSAFE_componentWillMount() {
+      this.getData();
+    }
   
     render() {
       return (

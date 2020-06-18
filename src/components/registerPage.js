@@ -18,11 +18,12 @@ class RegisterPage extends Component {
     };
 
     this.props.dispatch(registerUserAction(data));
+    console.log(data.name,'googbye');
   }
 
-  // UNSAFE_componentDidMount() {
-  //   document.title = 'React Login';
-  // }
+  UNSAFE_componentDidMount() {
+    document.title = 'React Login';
+  }
 
   render() {
     let message, isSuccess;

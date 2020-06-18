@@ -15,7 +15,7 @@ class LoginPage extends Component {
       email, password
     };
     this.props.dispatch(loginUserAction(data));
-    console.log(data.email);
+    console.log(data.email,'hello');
   }
   
   UNSAFE_componentDidMount() {
