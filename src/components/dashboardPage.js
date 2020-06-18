@@ -2,12 +2,19 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
-import { loginUserAction } from '../actions/authenticationActions';
 
 const CurrentDate = (props) => {
   return (
     <div>
       <p>The current date is: {props.date}</p>
+    </div>
+  );
+};
+
+const User = (props) => {
+  return (
+    <div>
+      <p>Welcome {props.email}</p>
     </div>
   );
 };
@@ -27,14 +34,6 @@ const Table = () => {
   )
 }
 
-const User = (props) => {
-  return (
-    <div>
-      <p>Welcome {props.email}</p>
-      {/* console.log(state); */}
-    </div>
-  );
-};
 
 class DashboardPage extends Component {
   onHandleLogin = (event) => {
@@ -57,12 +56,12 @@ class DashboardPage extends Component {
 
   render() {
     let isSuccess;
-    //message
+    let message;
 
 
     if (this.props.response.login.hasOwnProperty('response')) {
       isSuccess = this.props.response.login.response.success;
-      // message = this.props.response.login.response.message;
+       message = this.props.response.login.response.message;
 
       if (isSuccess) {
         setCookie('token', this.props.response.login.response.token, 1);

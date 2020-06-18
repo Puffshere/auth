@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, { } from 'react';
 // import Search from '../components/search';
 // import FixedBladesList from '../components/fixedBladesList';
 import AddKnifeForm from '../components/addKnifeForm';
@@ -24,9 +24,9 @@ const CurrentDate = (props) => {
 //             <table className='dashboardTableStyling'>
 //                 <tbody>
 //                 <tr className='dashboardTableHeadStyling'>Select Category</tr>
-                
+
 //                     <FixedBladesList fixedList={'SpyderCo, BenchMade'} />
-                
+
 //                 <tr>Automatic</tr>
 //                 <tr>Flippers</tr>
 //                 <tr>Slip Joints</tr>
@@ -49,45 +49,31 @@ class YourKnifePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            inputValue: '',
-            input: '',
-            brand: '',
-            visibility: false,
-            inputModel: '',
-            model: '',
-            pricePaid: 0,
-            wouldSalePrice: 0,
-            listForSale: false,
-            brandArray: '',
-            modelArray: '',
+
         };
-        this.handleChange = this.handleChange.bind(this);
     }
-    handleChange(event) {
-        this.setState({
-            inputValue: event.target.value
-        });
-    }
-    render() {
-        return (
-            <div className='dashboard'>
-                <h1 className='loginPageTitle'>BladeX</h1>
-                <h3 className='dashboardTitle'>Your Knives</h3>
-                <CurrentDate date={Date()} />
-                <User user={this.props.name} />
-                {/* <Search /> */}
-                <KnifeModal />
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <AddKnifeForm />
-                {/* <GetInput handleChange={this.handleChange} input={this.state.inputValue} />
+
+
+render() {
+    return (
+        <div className='dashboard'>
+            <h1 className='loginPageTitle'>BladeX</h1>
+            <h3 className='dashboardTitle'>Your Knives</h3>
+            <CurrentDate date={Date()} />
+            <User user={this.props.name} />
+            {/* <Search /> */}
+            <KnifeModal />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <AddKnifeForm />
+            {/* <GetInput handleChange={this.handleChange} input={this.state.inputValue} />
                 <RenderInput input={this.state.inputValue} /> */}
-                {/* <Table /> */}
-            </div>
-        );
-    }
+            {/* <Table /> */}
+        </div>
+    );
+}
 }
 
 // class GetInput extends React.Component {
