@@ -5,12 +5,15 @@ import AddKnifeForm from '../components/addKnifeForm';
 import KnifeModal from '../components/knifeModal';
 
 const CurrentDate = (props) => {
+    var tempDate = new Date();
+    var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
+    const currDate = date;
     return (
-        <div>
-            <p>The current date is: {props.date}</p>
-        </div>
+      <div>
+        <p>The current date is: {currDate}</p>
+      </div>
     );
-};
+  };
 
 // class Table extends React.Component {
 //     constructor(props) {

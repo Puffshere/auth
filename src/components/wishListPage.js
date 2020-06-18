@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
 const CurrentDate = (props) => {
+    var tempDate = new Date();
+    var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
+    const currDate = date;
     return (
-        <div>
-            <p>The current date is: {props.date}</p>
-        </div>
+      <div>
+        <p>The current date is: {currDate}</p>
+      </div>
     );
-};
+  };
 
 class WishListPage extends Component {
     render(

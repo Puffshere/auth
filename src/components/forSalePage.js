@@ -1,11 +1,14 @@
 import React, {} from 'react';
 
 const CurrentDate = (props) => {
-    return (
-        <div>
-            <p>The current date is: {props.date}</p>
-        </div>
-    );
+  var tempDate = new Date();
+  var date = (tempDate.getMonth()+1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
+  const currDate = date;
+  return (
+    <div>
+      <p>The current date is: {currDate}</p>
+    </div>
+  );
 };
 
 class ForSalePage extends React.Component {
