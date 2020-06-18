@@ -46,9 +46,9 @@ class DashboardPage extends Component {
     this.props.dispatch(loginUserAction(data));
   }
 
-  UNSAFE_componentDidMount() {
-    document.title = 'React Login';
-  }
+  // UNSAFE_componentDidMount() {
+  //   document.title = 'React Login';
+  // }
 
 
   render() {

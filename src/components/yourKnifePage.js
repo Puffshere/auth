@@ -1,8 +1,8 @@
 import React, {} from 'react';
-import Search from '../components/search';
-import FixedBladesList from '../components/fixedBladesList';
+// import Search from '../components/search';
+// import FixedBladesList from '../components/fixedBladesList';
 import AddKnifeForm from '../components/addKnifeForm';
-
+import KnifeModal from '../components/knifeModal';
 
 const CurrentDate = (props) => {
     return (
@@ -12,30 +12,30 @@ const CurrentDate = (props) => {
     );
 };
 
-class Table extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            input: '',
-        };
-    }
-    render() {
-        return (
-            <table className='dashboardTableStyling'>
-                <tbody>
-                <tr className='dashboardTableHeadStyling'>Select Category</tr>
+// class Table extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             input: '',
+//         };
+//     }
+//     render() {
+//         return (
+//             <table className='dashboardTableStyling'>
+//                 <tbody>
+//                 <tr className='dashboardTableHeadStyling'>Select Category</tr>
                 
-                    <FixedBladesList fixedList={'SpyderCo, BenchMade'} />
+//                     <FixedBladesList fixedList={'SpyderCo, BenchMade'} />
                 
-                <tr>Automatic</tr>
-                <tr>Flippers</tr>
-                <tr>Slip Joints</tr>
-                <tr>Assisted</tr>
-                </tbody>
-            </table>
-        )
-    }
-}
+//                 <tr>Automatic</tr>
+//                 <tr>Flippers</tr>
+//                 <tr>Slip Joints</tr>
+//                 <tr>Assisted</tr>
+//                 </tbody>
+//             </table>
+//         )
+//     }
+// }
 
 const User = (props) => {
     return (
@@ -75,11 +75,16 @@ class YourKnifePage extends React.Component {
                 <h3 className='dashboardTitle'>Your Knives</h3>
                 <CurrentDate date={Date()} />
                 <User user={this.props.name} />
-                <Search />
+                {/* <Search /> */}
+                <KnifeModal />
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <AddKnifeForm />
                 {/* <GetInput handleChange={this.handleChange} input={this.state.inputValue} />
                 <RenderInput input={this.state.inputValue} /> */}
-                <Table />
+                {/* <Table /> */}
             </div>
         );
     }
