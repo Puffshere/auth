@@ -3,6 +3,7 @@ import React, { } from 'react';
 // import FixedBladesList from '../components/fixedBladesList';
 import AddKnifeForm from '../components/addKnifeForm';
 import KnifeModal from '../components/knifeModal';
+import { Link } from 'react-router-dom';
 
 const CurrentDate = (props) => {
     var tempDate = new Date();
@@ -14,6 +15,14 @@ const CurrentDate = (props) => {
       </div>
     );
   };
+
+  const SignOut = (props) => {
+    return (
+    <Link to='login' className='signOutStyling'>
+      Sign Out
+      </Link>
+    )
+  }
 
 // class Table extends React.Component {
 //     constructor(props) {
@@ -60,7 +69,8 @@ class YourKnifePage extends React.Component {
 render() {
     return (
         <div className='dashboard'>
-            <h1 className='loginPageTitle'>BladeX</h1>
+            <SignOut />
+            <h1 className='yourKnifePageTitle'>BladeX</h1>
             <h3 className='dashboardTitle'>Your Knives</h3>
             <CurrentDate date={Date()} />
             <User user={this.props.name} />

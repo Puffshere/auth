@@ -78,3 +78,18 @@ color: black;
   background-color: #a19494;
   margin-top: -11px;
 }
+
+.signOutStyling {
+  width: 75px;
+  float: right;
+  text-shadow: .5px .5px .5px whitesmoke;
+  box-shadow: 2px 2px 2px rgb(68, 65, 65);
+  color: maroon;
+  cursor: pointer;
+}
+
+.yourKnifePageTitle {
+  text-shadow: 2px 2px 2px white;
+  color: maroon;
+}
+
