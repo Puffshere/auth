@@ -40,14 +40,14 @@ class LoginPage extends Component {
         <h3>Login Page</h3>
         {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
         <form onSubmit={this.onHandleLogin}>
-          <br></br>
           <div>
             <label htmlFor="email">Email</label>
+          <br></br>
             <input type="email" name="email" id="email" />
           </div>
-          <br></br>
           <div>
             <label htmlFor="password">Password</label>
+          <br></br>
             <input type="password" name="password" id="password" />
           </div>
           <br></br>

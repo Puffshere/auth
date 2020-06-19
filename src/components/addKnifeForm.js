@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, { } from 'react';
 import Checkbox from '../components/checkbox'
 
 class AddKnifeForm extends React.Component {
@@ -62,29 +62,25 @@ class AddKnifeForm extends React.Component {
 
         if (this.state.visibility) {
             return (
-                 <div>
-                     <div style={{ fontFamily: 'system-ui' }}>
-                         <label>
-                             <Checkbox 
-                                 checked={this.state.checked}
-                                 onChange={this.handleCheckboxChange}
-                             />
-                             <span style={{ marginLeft: 8 }}>Label Text</span>
-                         </label>
-                     </div>
+                <div>
+                    <div style={{ fontFamily: 'system-ui' }}>
+                        <label>
+                            <Checkbox
+                                checked={this.state.checked}
+                                onChange={this.handleCheckboxChange}
+                            />
+                        </label>
+                    </div>
                     <button className='dashboardLinkStyling' onClick={this.toggleVisibility}>Finished</button>
                     <form onSubmit={this.handleSubmit}>
                         <input value={this.state.input} placeholder='Brand' onChange={this.handleChange} />
                         <input value={this.state.inputModel} placeholder='Model' onChange={this.handleChange1} />
                         <Checkbox checked={this.state.checked}
-            onChange={this.handleCheckboxChange}/>
+                            onChange={this.handleCheckboxChange} />
                         <Checkbox checked={this.state.checked}
-            onChange={this.handleCheckboxChange}/>
-                        {/* <input>Price Paid</input> */}
-                        {/* <input>Would Sale Price</input> */}
+                            onChange={this.handleCheckboxChange} />
                         <button type='submit'>Submit</button>
                     </form>
-                    {/* { this.state.visibility && <h1>Hello my friend!</h1> } */}
                 </div>
             );
         } else {

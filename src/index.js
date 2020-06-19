@@ -5,6 +5,7 @@ import configureStore from './store/configureStore';
 import './index.css';
 import App from './container/App';
 
+
 const store = configureStore();
 
 ReactDOM.render(
@@ -12,4 +13,8 @@ ReactDOM.render(
     <App />
   </Provider>
   , document.getElementById('root'));
-
+  
+  
+  
+ 
+  
