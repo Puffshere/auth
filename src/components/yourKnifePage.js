@@ -77,9 +77,6 @@ render() {
             {/* <Search /> */}
             <KnifeModal />
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
             <AddKnifeForm />
             {/* <GetInput handleChange={this.handleChange} input={this.state.inputValue} />
                 <RenderInput input={this.state.inputValue} /> */}
