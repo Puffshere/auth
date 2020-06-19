@@ -54,6 +54,10 @@ body {
   text-shadow: 1px 1px 1px #bbadad;
   color: maroon;
 }
+.dashboardLinkStyling:hover {
+  text-decoration: none;
+  color: rgb(39, 0, 0);
+}
 
 .tableStyling {
   border: 1px 1px 1px black;
@@ -85,6 +89,11 @@ color: black;
   box-shadow: 2px 2px 2px rgb(68, 65, 65);
   color: maroon;
   cursor: pointer;
+}
+
+.signOutStyling:hover {
+  color: rgb(51, 1, 1);
+  text-decoration: none;
 }
 
 .yourKnifePageTitle {
