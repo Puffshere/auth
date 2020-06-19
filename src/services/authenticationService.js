@@ -1,6 +1,6 @@
 export const registerUserService = (request) => {
   const REGISTER_API_ENDPOINT = 'http://localhost:3000/api/v1/register';
-  
+
   const parameters = {
     method: 'POST',
     headers: {

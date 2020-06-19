@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, { } from 'react';
 
 class FixedBladesList extends React.Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class FixedBladesList extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.toggleVisibility = this.toggleVisibility.bind(this);
   }
+
   handleClick() {
     this.setState({
       name: 'These are your fixed blade knives'
@@ -40,4 +41,4 @@ class FixedBladesList extends React.Component {
   };
 }
 
-  export default FixedBladesList;
+export default FixedBladesList;

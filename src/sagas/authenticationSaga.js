@@ -9,7 +9,7 @@ export function* registerSaga(payload) {
     yield [
       put({ type: types.REGISTER_USER_SUCCESS, response })
     ];
-  } catch(error) {
+  } catch (error) {
     yield put({ type: types.REGISTER_USER_ERROR, error });
   }
 }
@@ -20,7 +20,7 @@ export function* loginSaga(payload) {
     yield [
       put({ type: types.LOGIN_USER_SUCCESS, response })
     ];
-  } catch(error) {
+  } catch (error) {
     yield put({ type: types.LOGIN_USER_ERROR, error })
   }
 }

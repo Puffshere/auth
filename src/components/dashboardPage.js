@@ -71,7 +71,6 @@ class DashboardPage extends Component {
           <h3 className='dashboardTitle'>Dashboard</h3>
         </div>
         <Table className='tableStyling' />
-        
         <div className='column2'></div>
       </div>
     );

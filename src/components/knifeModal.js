@@ -22,45 +22,46 @@ class KnifeModal extends Component {
     }
     UNSAFE_componentDidMount() {
         document.title = 'Knife Modal';
-      }
-      
-      render() {
-          return(
-              <div>
-                  <div className='modalTitleStyling'>Add A Knife:</div>
-                   <form onSubmit={this.onHandleSave}>
-          <br></br>
-          <div>
-                   <label htmlFor="brandName"></label>
-            <input type="brandName" placeholder='Brand' name="brandName" id="brandName" />
-            <br></br>
-            <br></br>
-                   <label htmlFor="model"></label>
-            <input type="model" placeholder='Model' name="model" id="model" />
-            <br></br>
-            <br></br>
-                   <label htmlFor="pricePaid"></label>
-            <input type="pricePaid" placeholder='Price Paid' name="pricePaid" id="pricePaid" />
-            <br></br>
-            <br></br>
-                   <label htmlFor="knifeSteel"></label>
-            <input type="knifeSteel" placeholder='Knife Steel' name="knifeSteel" id="knifeSteel" />
-            <br></br>
-            <br></br>
-                   <label htmlFor="handleMaterial"></label>
-            <input type="handleMaterial" placeholder='Handle Material' name="handleMaterial" id="handleMaterial" />
-            <br></br>
-            <br></br>
-                   <label htmlFor="forSalePrice"></label>
-            <input type="forSalePrice" placeholder='For Sale Price' name="forSalePrice" id="forSalePrice" />
-            <br></br>
-            <br></br>
+    }
 
-            <button>Save</button>
-                 </div>
-                 </form>
-              </div>
-          )
-      }
+    render() {
+        return (
+            <div>
+                <div className='modalTitleStyling'>Add A Knife:</div>
+                <form onSubmit={this.onHandleSave}>
+                    <br></br>
+                    <div>
+                        <label htmlFor="brandName"></label>
+                        <input type="brandName" placeholder='Brand' name="brandName" id="brandName" />
+                        <br></br>
+                        <br></br>
+                        <label htmlFor="model"></label>
+                        <input type="model" placeholder='Model' name="model" id="model" />
+                        <br></br>
+                        <br></br>
+                        <label htmlFor="pricePaid"></label>
+                        <input type="pricePaid" placeholder='Price Paid' name="pricePaid" id="pricePaid" />
+                        <br></br>
+                        <br></br>
+                        <label htmlFor="knifeSteel"></label>
+                        <input type="knifeSteel" placeholder='Knife Steel' name="knifeSteel" id="knifeSteel" />
+                        <br></br>
+                        <br></br>
+                        <label htmlFor="handleMaterial"></label>
+                        <input type="handleMaterial" placeholder='Handle Material' name="handleMaterial" id="handleMaterial" />
+                        <br></br>
+                        <br></br>
+                        <label htmlFor="forSalePrice"></label>
+                        <input type="forSalePrice" placeholder='For Sale Price' name="forSalePrice" id="forSalePrice" />
+                        <br></br>
+                        <br></br>
+
+                        <button>Save</button>
+                    </div>
+                </form>
+            </div>
+        )
+    }
 }
+
 export default connect()(KnifeModal);
