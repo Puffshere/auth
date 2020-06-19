@@ -27,7 +27,6 @@ class KnifeModal extends Component {
     render() {
         return (
             <div>
-                <div className='modalTitleStyling'>Add A Knife:</div>
                 <form onSubmit={this.onHandleSave}>
                     <br></br>
                     <div>
@@ -56,7 +55,7 @@ class KnifeModal extends Component {
                         <br></br>
                         <br></br>
 
-                        <button>Save</button>
+                        <button className='addKnifeSaveButton'>Save</button>
                     </div>
                 </form>
             </div>

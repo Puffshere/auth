@@ -3,7 +3,6 @@ import { Link, Redirect } from 'react-router-dom';
 import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
 import Dropdown from '../components/dropDown';
-import ReactDOM from 'react-dom';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -71,19 +70,10 @@ class DashboardPage extends Component {
           <h3 className='dashboardTitle'>Dashboard</h3>
         </div>
         <Table className='tableStyling' />
-        <div className='column2'></div>
       </div>
     );
   }
 }
-
-var displayDropdown = (
-  <div style={{ display: 'flex', justifyContent: 'center' }} >
-    <Dropdown />
-  </div>
-);
-
-ReactDOM.render(displayDropdown, document.getElementById('root'));
 
 const mapStateToProps = (response) => ({ response });
 export default connect(mapStateToProps)(DashboardPage); 

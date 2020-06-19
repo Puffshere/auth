@@ -48,15 +48,13 @@ class Dropdown extends React.Component {
             null
           )
         }
-
       </div>
-
     );
   }
 }
 
 var displayDropdown = (
-  <div style={{ display: 'flex', justifyContent: 'center' }} >
+  <div>
     <Dropdown />
   </div>
 );
