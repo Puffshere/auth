@@ -5,9 +5,9 @@ const CurrentDate = (props) => {
   var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
   const currDate = date;
   return (
-    <div>
-      <p>The current date is: {currDate}</p>
-    </div>
+      <div>
+          <p>{currDate}</p>
+      </div>
   );
 };
 

@@ -68,7 +68,7 @@ class YourKnifePage extends React.Component {
                 <Table className='tableStyling' />
                 <KnifeModal />
                 <br></br>
-                <AddKnifeForm />
+                {/* <AddKnifeForm /> */}
                 {/* <Table /> */}
             </div>
         );

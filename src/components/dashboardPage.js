@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
 import Dropdown from '../components/dropDown';
+import GetMockData from '../components/getMockData';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -36,10 +37,12 @@ const Table = () => {
   )
 }
 
+
 class DashboardPage extends Component {
   onHandleLogin = (event) => {
     event.preventDefault();
   }
+
 
   UNSAFE_componentDidMount() {
     document.title = 'React Login';
@@ -57,6 +60,7 @@ class DashboardPage extends Component {
         setCookie('token', this.props.response.login.response.token, 1);
       }
     }
+    
 
     return (
       <div className='dashboard'>
@@ -70,6 +74,7 @@ class DashboardPage extends Component {
           <h3 className='dashboardTitle'>Dashboard</h3>
         </div>
         <Table className='tableStyling' />
+        <GetMockData />
       </div>
     );
   }

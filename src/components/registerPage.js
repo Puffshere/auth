@@ -56,7 +56,7 @@ class RegisterPage extends Component {
           </div>
           <br></br>
           <div>
-            <button>Register</button>
+            <button className='registerButton'>Register</button>
           </div>
           <br></br>
         </form>

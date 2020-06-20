@@ -52,7 +52,7 @@ class LoginPage extends Component {
           </div>
           <br></br>
           <div>
-            <button>Login</button>
+            <button className='loginButton'>Login</button>
           </div>
           <br></br>
         </form>
