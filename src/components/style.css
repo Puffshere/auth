@@ -12,9 +12,8 @@ ul {
     right:0px;
     background-color: white;
     font-weight:bold;
-    position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 3;
     width: 20px;
 }
 
@@ -28,15 +27,30 @@ li a {
     text-decoration: none;
     color: maroon;
 }
-li {
+.help {
     padding: 8px 16px;
     border-bottom: 1px solid #e5e5e5;
     width: 130px;
+    position: relative;
+    z-index: 2;
+
+    /* list-style-type: none; */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* top:45px; */
+    /* right:0px; */
+    /* background-color: white; */
+    /* font-weight:bold; */
+    /* position: absolute; */
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    /* z-index: 3; */
+    /* width: 20px; */
+
 }
-li:last-child {
+.help:last-child {
     border-bottom: none;
 }
-li:hover {
+.help:hover {
     background-color: #e5e5e5;
     color: white;
 }
@@ -49,4 +63,15 @@ li:hover {
 .dropDownStyling:hover {
     color: rgb(53, 0, 0);
     text-shadow: 1px 1px 1px #bbadad;
+}
+
+.help1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:45px;
+    right:0px;
+    font-weight:bold;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }

@@ -143,3 +143,28 @@ color: black;
 td {
   margin: auto;
 }
+
+.dropStyling {
+  background-color: white;
+}
+
+.help {
+  background-color:  rgb(138, 138, 153);
+}
+
+
+
+
+
+.item{
+  margin: 10px;
+  font-size: 20px;
+  color: maroon;
+}
+
+.body{
+  font-size: 16px;
+  color: rgb(87, 67, 67);
+  padding-right: 5px;
+}
+

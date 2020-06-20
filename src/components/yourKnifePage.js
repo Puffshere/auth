@@ -1,5 +1,4 @@
 import React, { } from 'react';
-import AddKnifeForm from '../components/addKnifeForm';
 import KnifeModal from '../components/knifeModal';
 import { Link } from 'react-router-dom';
 
@@ -68,8 +67,6 @@ class YourKnifePage extends React.Component {
                 <Table className='tableStyling' />
                 <KnifeModal />
                 <br></br>
-                {/* <AddKnifeForm /> */}
-                {/* <Table /> */}
             </div>
         );
     }

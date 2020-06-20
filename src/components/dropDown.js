@@ -35,14 +35,17 @@ class Dropdown extends React.Component {
         <div className='dropDownStyling' onClick={this.showDropdownMenu}>Your Knives</div>
 
         {this.state.displayMenu ? (
+          <div className='dropStyling help1'>
           <ul>
-            <li><a className="active" href="#Create Page">Fixed Blades</a></li>
-            <li><a href="#Manage Pages">Slip Joints</a></li>
-            <li><a href="#Create Ads">Flippers</a></li>
-            <li><a href="#Manage Ads">Automatic</a></li>
-            <li><a href="#Activity Logs">Assisted</a></li>
-            <li><Link className='dashboardLinkStyling' to='yourKnives'>Add Knife</Link></li>
+            <li className='help'><a href="#Create Page">All Knives</a></li>
+            <li className='help'><a href="#Create Page">Fixed Blades</a></li>
+            <li className='help'><a href="#Manage Pages">Slip Joints</a></li>
+            <li className='help'><a href="#Create Ads">Flippers</a></li>
+            <li className='help'><a href="#Manage Ads">Automatic</a></li>
+            <li className='help'><a href="#Activity Logs">Assisted</a></li>
+            <li className='help'><Link className='dashboardLinkStyling' to='yourKnives'>Add Knife</Link></li>
           </ul>
+          </div>
         ) :
           (
             null
