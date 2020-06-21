@@ -33,23 +33,12 @@ li a {
     width: 130px;
     position: relative;
     z-index: 2;
-
-    /* list-style-type: none; */
-    /* margin: 0; */
-    /* padding: 0; */
-    /* top:45px; */
-    /* right:0px; */
-    /* background-color: white; */
-    /* font-weight:bold; */
-    /* position: absolute; */
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    /* z-index: 3; */
-    /* width: 20px; */
-
 }
+
 .help:last-child {
     border-bottom: none;
 }
+
 .help:hover {
     background-color: #e5e5e5;
     color: white;
@@ -74,4 +63,8 @@ li a {
     font-weight:bold;
     position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+ol {
+    padding: 0px 0px 0px 0px;
 }
