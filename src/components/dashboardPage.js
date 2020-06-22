@@ -3,7 +3,8 @@ import { Link, Redirect } from 'react-router-dom';
 import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
 import Dropdown from '../components/dropDown';
-import GetMockData from '../components/getMockData';
+// import GetMockData from '../components/getMockData';
+import GetLocalPosts from './GetLocalPosts';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -71,7 +72,7 @@ class DashboardPage extends Component {
           <h3 className='dashboardTitle'>Dashboard</h3>
         </div>
         <Table className='tableStyling' />
-        <GetMockData />
+        <GetLocalPosts />
       </div>
     );
   }

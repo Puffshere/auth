@@ -5,24 +5,25 @@ import { connect } from 'react-redux';
 class KnifeModal extends Component {
     onHandleSave = (event) => {
         event.prevent.Default();
-
-        let brandName = event.target.brandName.value;
+        
+        let brand = event.target.brand.value;
         let model = event.target.model.value;
-        let pricePaid = event.target.pricePaid.value;
-        let knifeSteel = event.target.knifeSteel.value;
-        let handleMaterial = event.target.handleMaterial.value;
-        let forSalePrice = event.target.forSalePrice.value;
-
+        let price = event.target.price.value;
+        let steel = event.target.steel.value;
+        let bladeShape = event.target.bladeShape.value;
+        let forSale = event.target.forSale.value;
+        
         const knifeData = {
-            brandName, model, pricePaid, knifeSteel, handleMaterial, forSalePrice
+            brand, model, price, steel, bladeShape, forSale
         };
-
         this.props.dispatch(addKnifeAction(knifeData));
-        console.log(knifeData.handleMaterial);
+        console.log(knifeData.bladeShape);
+        this.saveNewKnife = this.saveNewKnife.bind(this);
     }
     UNSAFE_componentDidMount() {
         document.title = 'Knife Modal';
     }
+
 
     render() {
         return (
@@ -30,31 +31,30 @@ class KnifeModal extends Component {
                 <form onSubmit={this.onHandleSave}>
                     <br></br>
                     <div>
-                        <label htmlFor="brandName"></label>
-                        <input type="brandName" placeholder='Brand' name="brandName" id="brandName" />
+                        <label htmlFor="brand"></label>
+                        <input type="brand" placeholder='Brand' name="brand" id="brand" />
                         <br></br>
                         <br></br>
                         <label htmlFor="model"></label>
                         <input type="model" placeholder='Model' name="model" id="model" />
                         <br></br>
                         <br></br>
-                        <label htmlFor="pricePaid"></label>
-                        <input type="pricePaid" placeholder='Price Paid' name="pricePaid" id="pricePaid" />
+                        <label htmlFor="price"></label>
+                        <input type="price" placeholder='Price Paid' name="price" id="price" />
                         <br></br>
                         <br></br>
-                        <label htmlFor="knifeSteel"></label>
-                        <input type="knifeSteel" placeholder='Knife Steel' name="knifeSteel" id="knifeSteel" />
+                        <label htmlFor="steel"></label>
+                        <input type="steel" placeholder='Knife Steel' name="steel" id="steel" />
                         <br></br>
                         <br></br>
-                        <label htmlFor="handleMaterial"></label>
-                        <input type="handleMaterial" placeholder='Handle Material' name="handleMaterial" id="handleMaterial" />
+                        <label htmlFor="bladeShape"></label>
+                        <input type="bladeShape" placeholder='Blade Shape' name="bladeShape" id="bladeShape" />
                         <br></br>
                         <br></br>
-                        <label htmlFor="forSalePrice"></label>
-                        <input type="forSalePrice" placeholder='For Sale Price' name="forSalePrice" id="forSalePrice" />
+                        <label htmlFor="forSale"></label>
+                        <input type="forSale" placeholder='For Sale Price' name="forSale" id="forSale" />
                         <br></br>
                         <br></br>
-
                         <button className='addKnifeSaveButton'>Save</button>
                     </div>
                 </form>

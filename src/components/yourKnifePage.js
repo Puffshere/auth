@@ -1,6 +1,7 @@
 import React, { } from 'react';
 import KnifeModal from '../components/knifeModal';
 import { Link } from 'react-router-dom';
+// import Post from '../components/Post';
 
 const CurrentDate = (props) => {
     var tempDate = new Date();
@@ -66,6 +67,7 @@ class YourKnifePage extends React.Component {
                 </div>
                 <Table className='tableStyling' />
                 <KnifeModal />
+                {/* <Post /> */}
                 <br></br>
             </div>
         );

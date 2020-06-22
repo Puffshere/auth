@@ -51,21 +51,21 @@ class ForSalePage extends React.Component {
     return (
       <div className='dashboard'>
         <h1 className='loginPageTitle'>BladeX</h1>
-        <h3 className='dashboardTitle'>For Sale</h3>
+        <h3 className='forSaleTitle'>For Sale</h3>
         <CurrentDate date={Date()} />
-        <h1>Current Knives for Sale</h1>
-        <ol className="tableBorder">
+        <h1 className='forSaleTitleStyling'>Current Knives for Sale:</h1>
+        <ol className="">
           {
             knives.map(knife => (
-              <div key={knife.id} align="">
-                <table className=''>
+              <div key={knife.id} align="start">
+                <table className='container'>
                   <thead>
                     <tr></tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className='show'>{knife.brand} {knife.model}</td>
-                      <td className='show'>{knife.forSale}</td>
+                      <td className='show shane'>{knife.brand} {knife.model}</td>
+                      <td className='show shane'>Asking Price:  {knife.forSale}</td>
                     </tr>
                   </tbody>
                 </table>

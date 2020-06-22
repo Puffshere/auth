@@ -36,6 +36,16 @@ body {
   text-shadow: .5px .5px .5px whitesmoke;
   background-color: rgb(199, 179, 179);
   box-shadow: 2px 2px 2px rgb(68, 65, 65);
+
+}  
+
+.forSaleTitle {
+  text-shadow: .5px .5px .5px rgb(85, 85, 85);
+  background-color: floralwhite;
+  box-shadow: 2px 2px 2px rgb(68, 65, 65);
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #bbadad;
+  color: maroon;
 }   
 
 .knifePageTitle {
@@ -141,9 +151,6 @@ color: black;
   background-color: rgb(44, 0, 0);
 }
 
-/* td {
-  margin: auto;
-} */
 
 .dropStyling {
   background-color: white;
@@ -174,31 +181,12 @@ tr {
 }
 
 .container {
-  padding-left: 2%;  
   font-size: 15px; 
 }
 
- /* tr:hover {
-  background-color: #6464644d;
-  -webkit-box-shadow: 0 3px 3px -3px #0E1119;
-  -moz-box-shadow: 0 3px 3px -3px #0E1119;
-  box-shadow: 0 3px 3px -3px #0E1119;
-} */
-
 .container tr:hover {
   background-color: #464a527c;
-/* -webkit-box-shadow: 0 6px 6px -6px #0E1119;
-      -moz-box-shadow: 0 6px 6px -6px #0E1119;
-           box-shadow: 0 6px 6px -6px #0E1119; */
 }
-
-/* .headStyling {
-  overflow: hidden;
-  width: 90%;
-  margin: auto;
-  padding: 0 0 8em 0;
-} */
-
 
 .show {
   color: maroon;
@@ -229,7 +217,6 @@ tr {
   transition-timing-function: line;
 }
 
-
 .show:hover {
   color: whitesmoke;
 }
@@ -253,4 +240,15 @@ tr {
 
 .idStyling {
   max-width: 5px;
+}
+
+.forSaleTitleStyling {
+  text-decoration: underline;
+  color: rgb(95, 0, 0);
+  text-shadow: 1px 1px 1px rgb(207, 207, 207);
+}
+
+.allKnivesStyling {
+  color: rgb(95, 0, 0);
+  text-shadow: 1px 1px 1px rgb(207, 207, 207);
 }
