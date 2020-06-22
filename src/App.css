@@ -141,9 +141,9 @@ color: black;
   background-color: rgb(44, 0, 0);
 }
 
-td {
+/* td {
   margin: auto;
-}
+} */
 
 .dropStyling {
   background-color: white;
@@ -170,44 +170,51 @@ tr {
 
 .shane {
   max-width: 20px;
-  border: 0.125em solid #333;
+  border-top: 0.125em solid #333;
 }
 
-.container td, .container th {
-  padding-bottom: 2%;
-  padding-top: 2%;
+.container {
   padding-left: 2%;  
-  font-size: 10px;
+  font-size: 15px; 
 }
 
- tr:hover {
+ /* tr:hover {
   background-color: #6464644d;
   -webkit-box-shadow: 0 3px 3px -3px #0E1119;
   -moz-box-shadow: 0 3px 3px -3px #0E1119;
   box-shadow: 0 3px 3px -3px #0E1119;
-}
+} */
 
 .container tr:hover {
   background-color: #464a527c;
--webkit-box-shadow: 0 6px 6px -6px #0E1119;
+/* -webkit-box-shadow: 0 6px 6px -6px #0E1119;
       -moz-box-shadow: 0 6px 6px -6px #0E1119;
-           box-shadow: 0 6px 6px -6px #0E1119;
+           box-shadow: 0 6px 6px -6px #0E1119; */
 }
 
-.headStyling {
+/* .headStyling {
   overflow: hidden;
   width: 90%;
   margin: auto;
   padding: 0 0 8em 0;
+} */
+
+
+.show {
+  color: maroon;
+  cursor: pointer;
 }
 
-
+.show1 {
+  display: flex;
+  flex-direction: row-reverse;
+  color: maroon;
+  cursor: pointer;
+}
 
  .show:hover {
   background-color: maroon;
   color: whitesmoke;
-  font-weight: bold;
-  font-size: 10px;
   box-shadow: #420808 
   -1px 1px,
    #3d0909 -2px 2px, 
@@ -218,14 +225,10 @@ tr {
   transform: translate3d(6px, -6px, 0);
   transition-delay: 0s;
   transition-duration: 0.4s;
-  transition-property: all;
+  transition-property: all; 
   transition-timing-function: line;
 }
 
-.show {
-  color: maroon;
-  cursor: pointer;
-}
 
 .show:hover {
   color: whitesmoke;
@@ -236,8 +239,18 @@ tr {
   width: 90%;
 }
 
-
-
 .a {
   color: maroon;
+}
+
+.tableBorder {
+  border: 0.125em solid #333;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.idStyling {
+  max-width: 5px;
 }

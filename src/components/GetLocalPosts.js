@@ -23,7 +23,9 @@ class GetLocalPosts extends Component {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td className='show shane'>{knife.brand} {knife.model}</td>
+                                            <td className='show shane idStyling'>{knife.id}.</td>         
+                                            <td className='show shane'>{knife.brand}</td>         
+                                            <td className='show shane'>{knife.model}</td>          
                                             <td className='show shane'>{knife.bladeShape}</td>
                                             <td className='show shane'>{knife.steel}</td>
                                             <td className='show shane'>{knife.price}</td>
