@@ -37,12 +37,10 @@ const Table = () => {
   )
 }
 
-
 class DashboardPage extends Component {
   onHandleLogin = (event) => {
     event.preventDefault();
   }
-
 
   UNSAFE_componentDidMount() {
     document.title = 'React Login';
@@ -60,7 +58,6 @@ class DashboardPage extends Component {
         setCookie('token', this.props.response.login.response.token, 1);
       }
     }
-    
 
     return (
       <div className='dashboard'>

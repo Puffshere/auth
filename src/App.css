@@ -170,6 +170,7 @@ tr {
 
 .shane {
   max-width: 20px;
+  border: 0.125em solid #333;
 }
 
 .container td, .container th {
@@ -185,6 +186,22 @@ tr {
   -moz-box-shadow: 0 3px 3px -3px #0E1119;
   box-shadow: 0 3px 3px -3px #0E1119;
 }
+
+.container tr:hover {
+  background-color: #464a527c;
+-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+      -moz-box-shadow: 0 6px 6px -6px #0E1119;
+           box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.headStyling {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  padding: 0 0 8em 0;
+}
+
+
 
  .show:hover {
   background-color: maroon;
@@ -207,12 +224,20 @@ tr {
 
 .show {
   color: maroon;
+  cursor: pointer;
+}
+
+.show:hover {
+  color: whitesmoke;
 }
 
 .showStopper {
   height: 10px;
+  width: 90%;
 }
 
-td {
-  border: 0.125em solid #333;
+
+
+.a {
+  color: maroon;
 }

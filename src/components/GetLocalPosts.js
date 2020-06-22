@@ -13,16 +13,6 @@ class GetLocalPosts extends Component {
         const { knives } = this.state;
         return (
             <div>
-                {/* <table>
-                    <thead>
-                        <tr>
-                            <th><h4>Knife</h4></th>
-                            <th><h4>Blade Shape</h4></th>
-                            <th><h4>Steel</h4></th>
-                            <th><h4>Price</h4></th>
-                        </tr>
-                    </thead>
-                </table> */}
                 <ol className="item">
                     {
                         knives.map(knife => (
