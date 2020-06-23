@@ -58,7 +58,7 @@ class ForSalePage extends React.Component {
           {
             knives.map(knife => (
               <div key={knife.id} align="start">
-                <table className='container'>
+                <table className='container tableBackground'>
                   <thead>
                     <tr></tr>
                   </thead>

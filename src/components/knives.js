@@ -4,13 +4,25 @@ const Knives = ({ knives }) => {
     return (
         <div>
             <center><h2 className='allKnivesStyling'>All Knives:</h2></center>
+            <table className='container showStopper nice'>
+                <tbody>
+                    <tr>
+                        <td className=''>Brand</td>
+                        <td className=''>Model</td>
+                        <td className=''>Blade Shape</td>
+                        <td className=''>Steel</td>
+                        <td className=''>Price</td>
+                    </tr>
+                </tbody>
+            </table>
             {knives.map((knife) => (
                 <div key={knife.id} align="start">
-                    <table className='container showStopper'>
+                    <table className='container tableBackground showStopper'>
                         <thead>
-                            <tr></tr>
+
                         </thead>
                         <tbody>
+
                             <tr>
                                 <td className='show shane'>{knife.brand}</td>
                                 <td className='show shane'>{knife.model}</td>

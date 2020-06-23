@@ -82,11 +82,11 @@ body {
   color: rgb(39, 0, 0);
 }
 
-.tableStyling {
+/* .tableStyling {
   border: 1px 1px 1px black;
   text-shadow: 1px 1px 1px rgb(184, 184, 236);
   box-shadow: 0px 2px 0px 0px rgb(80, 77, 77);
-}
+} */
 
 .column1 {
 width: 10px;
@@ -161,7 +161,6 @@ color: black;
 }
 
 .item {
-  margin: 10px;
   font-size: 20px;
   color: #beb7b8;
 }
@@ -171,9 +170,9 @@ tr {
   border: 1px 1px 1px maroon;
 }
 /* Background-color of the odd rows */
-.container tr:nth-child(odd) {
+ .tableBackground {
   background-color: #ffffff4f;
-}
+} 
 
 .shane {
   max-width: 20px;
@@ -184,21 +183,14 @@ tr {
   font-size: 15px; 
 }
 
-.container tr:hover {
+.tableBackground:hover {
   background-color: #464a527c;
 }
 
 .show {
   color: maroon;
   cursor: pointer;
-  padding-left: 10px;
-}
-
-.show1 {
-  display: flex;
-  flex-direction: row-reverse;
-  color: maroon;
-  cursor: pointer;
+  padding-left: 22px;
 }
 
  .show:hover {
@@ -218,10 +210,6 @@ tr {
   transition-timing-function: line;
 }
 
-.show:hover {
-  color: whitesmoke;
-}
-
 .showStopper {
   height: 10px;
   width: 90%;
@@ -229,18 +217,6 @@ tr {
 
 .a {
   color: maroon;
-}
-
-.tableBorder {
-  border: 0.125em solid #333;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.idStyling {
-  max-width: 5px;
 }
 
 .forSaleTitleStyling {
@@ -269,6 +245,28 @@ tr {
   color: maroon;
   text-shadow: 1px 1px 1px rgb(131, 116, 116);
 }
+
+.nice {
+  cursor: pointer;
+  padding-left: 22px;
+    background-color: #5d0909;
+    color: whitesmoke;
+    box-shadow: #420808 
+    -1px 1px,
+     #3d0909 -2px 2px, 
+      #490909 -3px 3px,
+       #490909 -4px 4px,
+       #490808 -5px 5px, 
+        #410808 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all; 
+    transition-timing-function: line;
+  }
+
+  
+
 
 
 
