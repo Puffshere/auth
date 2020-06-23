@@ -4,61 +4,78 @@
       "userId": 1,
       "id": "#",
       "model": "Model",
-      "forSale": "For Sale Price",
+      "forSalePrice": "For Sale Price",
       "brand": "Brand",
       "steel": "Steel",
       "bladeShape": "Blade Shape",
-      "price": "Price"
+      "price": "Price",
+      "forSale": false
     },
     {
       "userId": 1,
       "id": 1,
       "model": "940",
-      "forSale": false,
+      "forSalePrice": "",
       "brand": "Benchmade",
       "steel": "AUS8",
       "bladeShape": "Spear Point",
-      "price": "$179.99"
+      "price": "$179.99",
+      "forSale": false
     },
     {
       "userId": 1,
       "id": 2,
       "model": "Atmos",
-      "forSale": "$19.99",
+      "forSalePrice": "$19.99",
       "brand": "Kershaw",
       "steel": "LMAX",
       "bladeShape": "Clip Point",
-      "price": "$29.99"
+      "price": "$29.99",
+      "forSale": true
     },
     {
       "userId": 1,
       "id": 3,
       "model": "Sebenza21",
-      "forSale": false,
+      "forSalePrice": "",
       "brand": "Chris Reeves",
       "steel": "CPM S35VN",
       "bladeShape": "Tanto",
-      "price": "$499.99"
+      "price": "$499.99",
+      "forSale": false
     },
     {
       "userId": 1,
       "id": 4,
       "model": "Griptilian",
-      "forSale": "$79.99",
+      "forSalePrice": "$79.99",
       "brand": "Benchmade",
       "steel": "M390",
       "bladeShape": "Clip Point",
-      "price": "$89.99"
+      "price": "$89.99",
+      "forSale": true
     },
     {
       "userId": 1,
       "id": 5,
       "model": "Leek",
-      "forSale": "$29.99",
+      "forSalePrice": "$29.99",
       "brand": "Kershawn",
       "steel": "H1",
       "bladeShape": "Tanto",
-      "price": "$49.99"
+      "price": "$49.99",
+      "forSale": true
+    },
+    {
+      "userId": 1,
+      "id": 6,
+      "model": "Paramilitary 2",
+      "forSalePrice": "$99.99",
+      "brand": "Spyderco",
+      "steel": "S35VN",
+      "bladeShape": "Drop Point",
+      "price": "$129.99",
+      "forSale": true
     }
   ]
 }
