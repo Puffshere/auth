@@ -4,7 +4,7 @@ import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
 import Dropdown from '../components/dropDown';
 // import GetMockData from '../components/getMockData';
-import GetLocalPosts from './GetLocalPosts';
+import GetKnives from './GetKnives';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -72,9 +72,9 @@ class DashboardPage extends Component {
           <h3 className='dashboardTitle'>Dashboard</h3>
         </div>
         <p className='costOfcollection'>Cost of Collection:  </p>
-        <p className='costOfCollectNum'>$979.94</p>
+        <p className='costOfCollectNum'>$1,039.93</p>
         <Table className='tableStyling' />
-        <GetLocalPosts />
+        <GetKnives />
       </div>
     );
   }

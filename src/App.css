@@ -191,6 +191,7 @@ tr {
 .show {
   color: maroon;
   cursor: pointer;
+  padding-left: 10px;
 }
 
 .show1 {
@@ -255,7 +256,7 @@ tr {
 
 .costOfcollection {
   float: right;
-  padding-right: 85px;
+  padding-right: 95px;
   margin-top: -40px;
   color: maroon;
   text-shadow: 1px 1px 1px rgb(155, 154, 154);
@@ -263,7 +264,7 @@ tr {
 
 .costOfCollectNum {
   float: right;
-  padding-right: 20px;
+  padding-right: 15px;
   margin-top: -40px;
   color: maroon;
   text-shadow: 1px 1px 1px rgb(131, 116, 116);

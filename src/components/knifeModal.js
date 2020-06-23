@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { addKnifeAction } from "../actions/authenticationActions";
 import { connect } from 'react-redux';
+// import Knives from './knives';
+// import Post from '../components/Post';
+// import PostKnives from '../components/PostKnives'
 
 class KnifeModal extends Component {
     onHandleSave = (event) => {
@@ -28,6 +31,7 @@ class KnifeModal extends Component {
     render() {
         return (
             <div>
+                {/* <Post /> */}
                 <form onSubmit={this.onHandleSave}>
                     <br></br>
                     <div>

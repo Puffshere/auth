@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Knives from '../components/knives';
+import Knives from './knives';
 
-class GetLocalPosts extends Component {
+class GetKnives extends Component {
     state = {
         knives: []
     }
 
     componentDidMount() {
-        fetch('http://localhost:4000/knives')
+        fetch('http://localhost:3000/api/knives?access_token=5e3600914e63efce06c8cee3')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ knives: data })
@@ -21,4 +21,4 @@ class GetLocalPosts extends Component {
         )
     }
 }
-export default GetLocalPosts
+export default GetKnives

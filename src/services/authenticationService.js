@@ -19,7 +19,7 @@ export const registerUserService = (request) => {
 };
 
 export const loginUserService = (request) => {
-  const LOGIN_API_ENDPOINT = 'http://localhost:3000/api/v1/login';
+  const LOGIN_API_ENDPOINT = 'http://localhost:3002/api/v1/login';
 
   const parameters = {
     method: 'POST',

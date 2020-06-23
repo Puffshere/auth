@@ -1,38 +1,28 @@
 // import React, { Component } from "react";
 // import axios from "axios";
-// // import { addKnifeAction } from "../actions/authenticationActions";
-// // import { connect } from 'react-redux';
 
 // class Post extends Component {
 //   state = {
-//     userId: "",
-//     id: "",
-//     model: "",
-//     forSale: "",
-//     brand: "",
-//     steel: "",
-//     bladeShape: "",
-//     price: "",
+//     title: "",
+//     body: ""
 //   };
 
-//   onBrandChange = e => {
+//   onTitleChange = e => {
 //     this.setState({
-//       brand: e.target.value
+//       title: e.target.value
 //     });
 //   };
 
-//   onModelChange = e => {
+//   onBodyChange = e => {
 //     this.setState({
-//       model: e.target.value
+//       body: e.target.value
 //     });
 //   };
-
 //   handleSubmit = e => {
 //     e.preventDefault();
-    
 //     const data = {
-//       brand: this.state.brand,
-//       model: this.state.model
+//       title: this.state.title,
+//       body: this.state.body
 //     };
 //     axios
 //       .post("https://localhost:4000/posts", data)
@@ -45,13 +35,13 @@
 //       <div className="post">
 //         <form className="post" onSubmit={this.handleSubmit}>
 //           <input
-//             placeholder="Brand" value={this.state.brand}
-//             onChange={this.onBrandChange} required
+//             placeholder="Title" value={this.state.title}
+//             onChange={this.onTitleChange} required
 //           />
 //           <textarea
-//              placeholder="Model" value={this.state.model}
-//              onChange={this.onModelChange} required
-//            />
+//             placeholder="Body" value={this.state.body}
+//             onChange={this.onBodyChange} required
+//           />
 //           <button type="submit">Create Post</button>
 //         </form>
 //       </div>
