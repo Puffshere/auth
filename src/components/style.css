@@ -54,6 +54,12 @@ li a {
     text-shadow: 1px 1px 1px #bbadad;
 }
 
+@media only screen and (max-width: 450px) {
+    .dropDownStyling {
+      font-size: 15px;
+    }
+  }
+
 .help1 {
     list-style-type: none;
     margin: 0;
