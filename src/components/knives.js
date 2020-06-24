@@ -19,10 +19,8 @@ const Knives = ({ knives }) => {
                 <div key={knife.id} align="start">
                     <table className='container tableBackground showStopper'>
                         <thead>
-
                         </thead>
                         <tbody>
-
                             <tr>
                                 <td className='show shane'>{knife.brand}</td>
                                 <td className='show shane'>{knife.model}</td>

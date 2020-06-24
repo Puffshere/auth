@@ -3,7 +3,6 @@ import { Link, Redirect } from 'react-router-dom';
 import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
 import Dropdown from '../components/dropDown';
-// import GetMockData from '../components/getMockData';
 import GetKnives from './GetKnives';
 
 const CurrentDate = (props) => {

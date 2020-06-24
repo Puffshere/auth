@@ -63,5 +63,4 @@ class LoginPage extends Component {
 }
 
 const mapStateToProps = (response) => ({response});
-
 export default connect(mapStateToProps)(LoginPage);

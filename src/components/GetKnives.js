@@ -21,4 +21,5 @@ class GetKnives extends Component {
         )
     }
 }
+
 export default GetKnives

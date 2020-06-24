@@ -1,7 +1,6 @@
 import React, { } from 'react';
 import KnifeModal from '../components/knifeModal';
 import { Link } from 'react-router-dom';
-// import Post from '../components/Post';
 
 const CurrentDate = (props) => {
     var tempDate = new Date();
@@ -33,15 +32,8 @@ class Table extends React.Component {
         return (
             <table className='dashboardTableStyling'>
                 <tbody>
-                <tr className='dashboardTableHeadStyling'>Add Knife</tr>
-
-                    {/* <FixedBladesList fixedList={'SpyderCo, BenchMade'} /> */}
-
-                {/* <tr>Automatic</tr>
-                <tr>Flippers</tr>
-                <tr>Slip Joints</tr>
-                <tr>Assisted</tr> */}
-                </tbody> 
+                    <tr className='dashboardTableHeadStyling'>Add Knife</tr>
+                </tbody>
             </table>
         )
     }
@@ -59,15 +51,14 @@ class YourKnifePage extends React.Component {
             <div className='dashboard'>
                 <SignOut />
                 <div className='column1'>
-                <h1 className='yourKnifePageTitle'>BladeX</h1>
-                <div className='dateStyling'>
-                <CurrentDate date={Date()} />
-                </div>
-                <h3 className='knifePageTitle'>YourKnives</h3>
+                    <h1 className='yourKnifePageTitle'>BladeX</h1>
+                    <div className='dateStyling'>
+                        <CurrentDate date={Date()} />
+                    </div>
+                    <h3 className='knifePageTitle'>YourKnives</h3>
                 </div>
                 <Table className='tableStyling' />
                 <KnifeModal />
-                {/* <Post /> */}
                 <br></br>
             </div>
         );

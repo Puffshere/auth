@@ -88,12 +88,6 @@ body {
   }
 }
 
-/* .tableStyling {
-  border: 1px 1px 1px black;
-  text-shadow: 1px 1px 1px rgb(184, 184, 236);
-  box-shadow: 0px 2px 0px 0px rgb(80, 77, 77);
-} */
-
 .column1 {
 width: 10px;
 height: 100%;
@@ -175,7 +169,7 @@ color: black;
 tr {
   border: 1px 1px 1px maroon;
 }
-/* Background-color of the odd rows */
+
 .tableBackground {
   background-color: #ffffff4f;
 } 
@@ -198,11 +192,12 @@ tr {
     font-size: 6px;
   }
 }
-          @media only screen and (max-width: 350px) {
-            .show {
-             font-size: 5px;
-            }
-          }
+
+@media only screen and (max-width: 350px) {
+.show {
+  font-size: 5px;
+  }
+}
 
 .show {
   color: maroon;
@@ -246,17 +241,18 @@ tr {
   color: rgb(95, 0, 0);
   text-shadow: 1px 1px 1px rgb(207, 207, 207);
 }
-              @media only screen and (max-width: 450px) {
-                .allKnivesStyling {
-                  font-size: 20px;
-                }
-              }
-@media only screen and (max-width: 350px) {
+
+@media only screen and (max-width: 450px) {
 .allKnivesStyling {
-font-size: 15px;
-}
+  font-size: 20px;
+  }
 }
 
+@media only screen and (max-width: 350px) {
+  .allKnivesStyling {
+  font-size: 15px;
+  }
+}
 
 .costOfcollection {
   float: right;
@@ -265,12 +261,13 @@ font-size: 15px;
   color: maroon;
   text-shadow: 1px 1px 1px rgb(155, 154, 154);
 }
-              @media only screen and (max-width: 450px) {
-                .costOfcollection {
-                  font-size: 10px;
-                  padding-right: 65px;
-                }
-              }
+
+@media only screen and (max-width: 450px) {
+.costOfcollection {
+  font-size: 10px;
+  padding-right: 65px;
+  }
+}
 
 @media only screen and (max-width: 450px) {
   .costOfCollectNum {
@@ -304,12 +301,3 @@ font-size: 15px;
     transition-property: all; 
     transition-timing-function: line;
   }
-
-  
-
-
-
-
-
-
-
