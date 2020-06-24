@@ -1,6 +1,6 @@
 import React, { } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import ForSaleKnives from './forSaleKnives';
+// import ForSaleKnives from './forSaleKnives';
 import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
@@ -52,6 +52,21 @@ class ForSalePage extends React.Component {
   }
 
   render() {
+    const forSaleTrue = this.state.knives.filter(i => i.forSale == true);
+    const renderForSale = forSaleTrue.map((i) => 
+    <table className='container tableBackground showStopper'>
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className='show1 shane'>{i.brand}</td>
+                                <td className='show1 shane'>{i.model}</td>
+                                <td className='show1 shane'>${i.forSalePrice}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+    );
     return (
       <div className='dashboard'>
         <SignOut />
@@ -62,10 +77,21 @@ class ForSalePage extends React.Component {
           </div>
           <h3 className='dashboardTitle1'>ForSale</h3>
         </div>
-        <p className='costOfcollection1'>Amount for Sale:  </p>
+        <p className='costOfcollection'>Amount for Sale:  </p>
         <p className='costOfCollectNum'>$239.95</p>
         <Table className='tableStyling' />
-        <ForSaleKnives knives={this.state.knives} />
+        <center><h2 className='allKnivesStyling'>Knives for Sale:</h2></center>
+        <table className='container showStopper nice'>
+          <tbody>
+            <tr>
+              <td className=''>Brand</td>
+              <td className=''>Model</td>
+              <td className=''>Price</td>
+            </tr>
+          </tbody>
+        </table>
+        {renderForSale}
+        {/* <ForSaleKnives knives={this.state.knives} /> */}
       </div>
     );
   }

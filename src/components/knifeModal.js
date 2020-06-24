@@ -12,9 +12,10 @@ class KnifeModal extends Component {
         let steel = event.target.steel.value;
         let bladeShape = event.target.bladeShape.value;
         let forSale = event.target.forSale.value;
+        let forSalePrice = event.target.forSalePrice.value;
         
         const knifeData = {
-            brand, model, price, steel, bladeShape, forSale
+            brand, model, price, steel, bladeShape, forSale, forSalePrice
         };
         this.props.dispatch(addKnifeAction(knifeData));
         console.log(knifeData.bladeShape);
@@ -52,7 +53,11 @@ class KnifeModal extends Component {
                         <br></br>
                         <br></br>
                         <label htmlFor="forSale"></label>
-                        <input type="forSale" placeholder='For Sale Price' name="forSale" id="forSale" />
+                        <input type="forSale" placeholder='true or false' name="forSale" id="forSale" />
+                        <br></br>
+                        <br></br>
+                        <label htmlFor="forSalePrice"></label>
+                        <input type="forSalePrice" placeholder='For Sale Price' name="forSalePrice" id="forSalePrice" />
                         <br></br>
                         <br></br>
                         <button className='addKnifeSaveButton'>Save</button>

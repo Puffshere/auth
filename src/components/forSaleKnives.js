@@ -20,9 +20,9 @@ const ForSaleKnives = ({ knives }) => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td className='show shane'>{knife.brand}</td>
-                                <td className='show shane'>{knife.model}</td>
-                                <td className='show shane'>${knife.forSalePrice}</td>
+                                <td className='show1 shane'>{knife.brand}</td>
+                                <td className='show1 shane'>{knife.model}</td>
+                                <td className='show1 shane'>${knife.forSalePrice}</td>
                             </tr>
                         </tbody>
                     </table>

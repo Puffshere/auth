@@ -193,6 +193,12 @@ tr {
   background-color: #464a527c;
 }
 
+.show {
+  color: maroon;
+  cursor: pointer;
+  padding-left: 22px;
+}
+
 @media only screen and (max-width: 450px) {
   .show {
     font-size: 6px;
@@ -205,13 +211,42 @@ tr {
   }
 }
 
-.show {
+ .show:hover {
+  background-color: maroon;
+  color: whitesmoke;
+  box-shadow: #420808 
+  -1px 1px,
+   #3d0909 -2px 2px, 
+    #490909 -3px 3px,
+     #490909 -4px 4px,
+     #490808 -5px 5px, 
+      #410808 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all; 
+  transition-timing-function: line;
+}
+
+.show1 {
   color: maroon;
   cursor: pointer;
   padding-left: 22px;
 }
 
- .show:hover {
+@media only screen and (max-width: 450px) {
+  .show1 {
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+.show1 {
+  font-size: 8px;
+  }
+}
+
+ .show1:hover {
   background-color: maroon;
   color: whitesmoke;
   box-shadow: #420808 
