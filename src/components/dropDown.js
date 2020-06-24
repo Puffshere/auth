@@ -36,7 +36,7 @@ class Dropdown extends React.Component {
         {this.state.displayMenu ? (
           <div className='dropStyling help1'>
           <ul>
-            <li className='help'><a href="#Create Page">All Knives</a></li>
+            <li className='help'><a href="dashboard">Dashboard</a></li>
             <li className='help'><a href="#Create Page">Fixed Blades</a></li>
             <li className='help'><a href="#Manage Pages">Slip Joints</a></li>
             <li className='help'><a href="#Create Ads">Flippers</a></li>

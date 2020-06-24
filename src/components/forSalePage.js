@@ -1,5 +1,7 @@
 import React, { } from 'react';
-import knives from '../components/mockData';
+import { Link, Redirect } from 'react-router-dom';
+import ForSaleKnives from './forSaleKnives';
+import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -7,46 +9,63 @@ const CurrentDate = (props) => {
   const currDate = date;
   return (
     <div>
-      <p>{currDate}</p>
+      <p className='dateStyling'>{currDate}</p>
     </div>
   );
 };
 
+const SignOut = (props) => {
+  return (
+    <Link to='login' className='signOutStyling'>
+      Sign Out
+    </Link>
+  )
+}
+
+const Table = () => {
+  return (
+    <div>
+      <table className='dashboardTableStyling'>
+        <tbody>
+          <tr><td className='border'><Dropdown /></td>
+            <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
+            <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
+            <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td></tr>
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
 class ForSalePage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      knives: [
-      ]
-    }
+  state = {
+    knives: []
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/api/knives?access_token=5e3600914e63efce06c8cee3')
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ knives: data })
+      })
+      .catch(console.log)
   }
 
   render() {
     return (
       <div className='dashboard'>
-        <h1 className='loginPageTitle'>BladeX</h1>
-        <h3 className='forSaleTitle'>For Sale</h3>
-        <CurrentDate date={Date()} />
-        <h1 className='forSaleTitleStyling'>Current Knives for Sale:</h1>
-        <ol className="">
-          {
-            knives.map(knife => (
-              <div key={knife.id} align="start">
-                <table className='container tableBackground'>
-                  <thead>
-                    <tr></tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className='show shane'>{knife.brand} {knife.model}</td>
-                      <td className='show shane'>Asking Price:  {knife.forSale}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            ))
-          }
-        </ol>
+        <SignOut />
+        <div className='column1'>
+          <h1 className='loginPageTitle'>BladeX</h1>
+          <div className='dateStyling'>
+            <CurrentDate date={Date()} />
+          </div>
+          <h3 className='dashboardTitle1'>ForSale</h3>
+        </div>
+        <p className='costOfcollection1'>Amount for Sale:  </p>
+        <p className='costOfCollectNum'>$239.95</p>
+        <Table className='tableStyling' />
+        <ForSaleKnives knives={this.state.knives} />
       </div>
     );
   }

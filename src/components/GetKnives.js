@@ -17,7 +17,9 @@ class GetKnives extends Component {
 
     render() {
         return (
+            <div>
             <Knives knives={this.state.knives} />
+            </div>
         )
     }
 }
