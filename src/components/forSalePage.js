@@ -1,6 +1,5 @@
 import React, { } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-// import ForSaleKnives from './forSaleKnives';
 import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
@@ -39,34 +38,36 @@ const Table = () => {
 
 class ForSalePage extends React.Component {
   state = {
-    knives: []
+    blades: []
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/knives?access_token=5e3600914e63efce06c8cee3')
+    fetch('http://localhost:3000/api/blades?access_token=5e3600914e63efce06c8cee3')
       .then(res => res.json())
       .then((data) => {
-        this.setState({ knives: data })
+        this.setState({ blades: data })
       })
       .catch(console.log)
   }
 
   render() {
-    const forSaleTrue = this.state.knives.filter(i => i.forSale == true);
-    const renderForSale = forSaleTrue.map((i) => 
-    <table className='container tableBackground showStopper'>
-                        <thead>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className='show1 shane'>{i.brand}</td>
-                                <td className='show1 shane'>{i.model}</td>
-                                <td className='show1 shane'>${i.forSalePrice}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-    
+
+    const forSaleTrue = this.state.blades.filter(i => i.forSale == true);
+    const renderForSale = forSaleTrue.map((i) =>
+
+      <table className='container tableBackground showStopper'>
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <td className='show1 shane'>{i.brand}</td>
+            <td className='show1 shane'>{i.model}</td>
+            <td className='show1 shane'>${i.forSalePrice}</td>
+          </tr>
+        </tbody>
+      </table>
     );
+
     return (
       <div className='dashboard'>
         <SignOut />
@@ -91,7 +92,6 @@ class ForSalePage extends React.Component {
           </tbody>
         </table>
         {renderForSale}
-        {/* <ForSaleKnives knives={this.state.knives} /> */}
       </div>
     );
   }

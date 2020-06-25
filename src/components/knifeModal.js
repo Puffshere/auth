@@ -53,7 +53,7 @@ class KnifeModal extends Component {
                         <br></br>
                         <br></br>
                         <label htmlFor="forSale"></label>
-                        <input type="forSale" placeholder='true or false' name="forSale" id="forSale" />
+                        <input type="forSale" placeholder='For Sale' name="forSale" id="forSale" />
                         <br></br>
                         <br></br>
                         <label htmlFor="forSalePrice"></label>

@@ -3,14 +3,14 @@ import Knives from './knives';
 
 class GetKnives extends Component {
     state = {
-        knives: []
+        blades: []
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/knives?access_token=5e3600914e63efce06c8cee3')
+        fetch('http://localhost:3000/api/blades?access_token=5e3600914e63efce06c8cee3')
             .then(res => res.json())
             .then((data) => {
-                this.setState({ knives: data })
+                this.setState({ blades: data })
             })
             .catch(console.log)
     }
@@ -18,7 +18,7 @@ class GetKnives extends Component {
     render() {
         return (
             <div>
-            <Knives knives={this.state.knives} />
+            <Knives knives={this.state.blades} />
             </div>
         )
     }
