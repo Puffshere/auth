@@ -62,6 +62,7 @@ class Flippers extends React.Component {
           <tr>
             <td className='show1 shane'>{i.brand}</td>
             <td className='show1 shane'>{i.model}</td>
+            <td className='show1 shane'>{i.steel}</td>
             <td className='show1 shane'>{i.bladeShape}</td>
             <td className='show1 shane'>{i.handleMaterial}</td>
           </tr>
@@ -86,6 +87,7 @@ class Flippers extends React.Component {
             <tr>
               <td className=''>Brand</td>
               <td className=''>Model</td>
+              <td className=''>Steel</td>
               <td className=''>Blade Shape</td>
               <td className=''>Handle</td>
             </tr>
