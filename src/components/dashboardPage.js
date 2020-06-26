@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
 import Dropdown from '../components/dropDown';
-import GetKnives from './GetKnives';
+// import GetKnives from './GetKnives';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -38,15 +38,60 @@ const Table = () => {
 }
 
 class DashboardPage extends Component {
+  state = {
+    blades: []
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/api/blades?access_token=5e3600914e63efce06c8cee3')
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ blades: data })
+      })
+      .catch(console.log)
+  }
+
+
+
+
+
+
+
   onHandleLogin = (event) => {
     event.preventDefault();
   }
+
+
+
+
+
+
+
+
 
   UNSAFE_componentDidMount() {
     document.title = 'React Login';
   }
 
   render() {
+    const allKnivestrue = this.state.blades.filter(i => i.allKnives == true);
+    const renderAllKnives = allKnivestrue.map((i) =>
+
+    <table className='container tableBackground showStopper'>
+    <thead>
+    </thead>
+    <tbody>
+      <tr>
+        <td className='show1 shane'>{i.brand}</td>
+        <td className='show1 shane'>{i.model}</td>
+        <td className='show1 shane'>{i.bladeShape}</td>
+        <td className='show1 shane'>{i.steel}</td>
+        <td className='show1 shane'>${i.price}</td>
+      </tr>
+    </tbody>
+  </table>
+);
+
     let isSuccess;
     let message;
 
@@ -73,7 +118,20 @@ class DashboardPage extends Component {
         <p className='costOfcollection'>Cost of Collection:  </p>
         <p className='costOfCollectNum'>$1,039.95</p>
         <Table className='tableStyling' />
-        <GetKnives />
+        <center><h2 className='allKnivesStyling'>All Knives:</h2></center>
+        <table className='container showStopper nice'>
+          <tbody>
+            <tr>
+              <td className=''>Brand</td>
+              <td className=''>Model</td>
+              <td className=''>Blade Shape</td>
+              <td className=''>Steel</td>
+              <td className=''>Price</td>
+            </tr>
+          </tbody>
+        </table>
+        {/* <Table className='tableStyling' /> */}
+        {renderAllKnives}
       </div>
     );
   }

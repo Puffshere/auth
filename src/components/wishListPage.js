@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -6,24 +8,95 @@ const CurrentDate = (props) => {
   const currDate = date;
   return (
     <div>
-      <p>The current date is: {currDate}</p>
+      <p className='dateStyling'>{currDate}</p>
     </div>
   );
 };
 
-class WishListPage extends Component {
-  render(
-  ) {
+const SignOut = (props) => {
+  return (
+    <Link to='login' className='signOutStyling'>
+      Sign Out
+    </Link>
+  )
+}
+
+const Table = () => {
+  return (
+    <div>
+      <table className='dashboardTableStyling'>
+        <tbody>
+          <tr><td className='border'><Dropdown /></td>
+            <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
+            <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
+            <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td></tr>
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+class WishList extends React.Component {
+  state = {
+    blades: []
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/api/blades?access_token=5e3600914e63efce06c8cee3')
+      .then(res => res.json())
+      .then((data) => {
+        this.setState({ blades: data })
+      })
+      .catch(console.log)
+  }
+
+  render() {
+
+    const wishListtrue = this.state.blades.filter(i => i.wishList == true);
+    const renderWishList = wishListtrue.map((i) =>
+
+      <table className='container tableBackground showStopper'>
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <td className='show1 shane'>{i.brand}</td>
+            <td className='show1 shane'>{i.model}</td>
+            <td className='show1 shane'>{i.bladeShape}</td>
+            <td className='show1 shane'>{i.handleMaterial}</td>
+            <td className='show1 shane'>${i.price}</td>
+          </tr>
+        </tbody>
+      </table>
+    );
 
     return (
       <div className='dashboard'>
-
-        <h1 className='loginPageTitle'>BladeX</h1>
-        <h3 className='dashboardTitle'>Wish List</h3>
-        <CurrentDate date={Date()} />
+        <SignOut />
+        <div className='column1'>
+          <h1 className='loginPageTitle'>BladeX</h1>
+          <div className='dateStyling'>
+            <CurrentDate date={Date()} />
+          </div>
+          <h3 className='dashboardTitle1'>WishList</h3>
+        </div>
+        <Table className='tableStyling' />
+        <center><h2 className='allKnivesStyling'>Wish List:</h2></center>
+        <table className='container showStopper nice'>
+          <tbody>
+            <tr>
+              <td className=''>Brand</td>
+              <td className=''>Model</td>
+              <td className=''>Blade Shape</td>
+              <td className=''>Handle</td>
+              <td className=''>Price</td>
+            </tr>
+          </tbody>
+        </table>
+        {renderWishList}
       </div>
     );
   }
-}
+};
 
-export default WishListPage;
+export default WishList;
