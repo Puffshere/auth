@@ -71,7 +71,7 @@ class DashboardPage extends Component {
           <h3 className='dashboardTitle'>Dashboard</h3>
         </div>
         <p className='costOfcollection'>Cost of Collection:  </p>
-        <p className='costOfCollectNum'>$1,039.93</p>
+        <p className='costOfCollectNum'>$1,039.95</p>
         <Table className='tableStyling' />
         <GetKnives />
       </div>
