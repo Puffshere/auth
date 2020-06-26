@@ -18,6 +18,7 @@
 //         "frontFlipper": false,
 //         "thumbStud": true,
 //         "handleMaterial": "Plastic",
-//         "bladeShape": "Drop Point"
+//         "bladeShape": "Drop Point",
+//         "fixedBlade": false
 //     }
 // ]

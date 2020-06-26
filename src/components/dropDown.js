@@ -37,11 +37,11 @@ class Dropdown extends React.Component {
           <div className='dropStyling help1'>
           <ul>
             <li className='help'><a href="dashboard">Dashboard</a></li>
-            <li className='help'><a href="#Create Page">Fixed Blades</a></li>
-            <li className='help'><a href="#Manage Pages">Slip Joints</a></li>
-            <li className='help'><a href="#Create Ads">Flippers</a></li>
-            <li className='help'><a href="#Manage Ads">Automatic</a></li>
-            <li className='help'><a href="#Activity Logs">Assisted</a></li>
+            <li className='help'><a href="fixedBlades">Fixed Blades</a></li>
+            <li className='help'><a href="slipJoints">Slip Joints</a></li>
+            <li className='help'><a href="flippers">Flippers</a></li>
+            <li className='help'><a href="automatics">Automatic</a></li>
+            <li className='help'><a href="assisted">Assisted</a></li>
             <li className='help'><Link className='dashboardLinkStyling' to='yourKnives'>Add Knife</Link></li>
           </ul>
           </div>

@@ -1,6 +1,6 @@
 import React, { } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Dropdown from '../components/dropDown';
+import Dropdown from './dropDown';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -36,7 +36,7 @@ const Table = () => {
   )
 }
 
-class FixedBlades extends React.Component {
+class Automatics extends React.Component {
   state = {
     blades: []
   }
@@ -52,8 +52,8 @@ class FixedBlades extends React.Component {
 
   render() {
 
-    const fixedBladetrue = this.state.blades.filter(i => i.fixedBlade == true);
-    const renderFixedBlades = fixedBladetrue.map((i) =>
+    const automaticstrue = this.state.blades.filter(i => i.automatic == true);
+    const renderAutomatics = automaticstrue.map((i) =>
 
       <table className='container tableBackground showStopper'>
         <thead>
@@ -63,6 +63,7 @@ class FixedBlades extends React.Component {
             <td className='show1 shane'>{i.brand}</td>
             <td className='show1 shane'>{i.model}</td>
             <td className='show1 shane'>{i.steel}</td>
+            <td className='show1 shane'>{i.bladeShape}</td>
             <td className='show1 shane'>{i.handleMaterial}</td>
           </tr>
         </tbody>
@@ -77,24 +78,25 @@ class FixedBlades extends React.Component {
           <div className='dateStyling'>
             <CurrentDate date={Date()} />
           </div>
-          <h3 className='dashboardTitle1'>FixedBlades</h3>
+          <h3 className='dashboardTitle1'>Automatic</h3>
         </div>
         <Table className='tableStyling' />
-        <center><h2 className='allKnivesStyling'>Fixed Blades:</h2></center>
+        <center><h2 className='allKnivesStyling'>Automatic:</h2></center>
         <table className='container showStopper nice'>
           <tbody>
             <tr>
               <td className=''>Brand</td>
               <td className=''>Model</td>
               <td className=''>Steel</td>
+              <td className=''>Blade Shape</td>
               <td className=''>Handle</td>
             </tr>
           </tbody>
         </table>
-        {renderFixedBlades}
+        {renderAutomatics}
       </div>
     );
   }
 };
 
-export default FixedBlades;
+export default Automatics;

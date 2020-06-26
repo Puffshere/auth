@@ -13,6 +13,11 @@ import YourKnifePage from '../components/yourKnifePage';
 import ForSalePage from '../components/forSalePage';
 import EDCRotationPage from '../components/edcRotationPage';
 import WishListPage from '../components/wishListPage';
+import FixedBlades from '../components/fixedBladesList';
+import SlipJoints from '../components/slipJoints';
+import Flippers from '../components/flippers';
+import Assisted from '../components/assisted';
+import Automatics from '../components/automatics';
 
 class App extends Component {
   render() {
@@ -28,6 +33,11 @@ class App extends Component {
             <PrivateRoute path='/forSale' component={ForSalePage} />
             <PrivateRoute path='/edcRotation' component={EDCRotationPage} />
             <PrivateRoute path='/wishList' component={WishListPage} />
+            <PrivateRoute path='/fixedBlades' component={FixedBlades} />
+            <PrivateRoute path='/slipJoints' component={SlipJoints} />
+            <PrivateRoute path='/flippers' component={Flippers} />
+            <PrivateRoute path='/automatics' component={Automatics} />
+            <PrivateRoute path='/assisted' component={Assisted} />
           </Switch>
         </div>
       </BrowserRouter>
