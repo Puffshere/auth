@@ -31,11 +31,6 @@ class KnifeStyleDropDown extends React.Component {
         });
     }
 
-
-
-
-
-
     showDisplayStyle1(event) {
         event.preventDefault();
         this.setState({ displayStyle: true, style: "Fixed Blade", titleDisplay: false }, () => {
@@ -72,12 +67,6 @@ class KnifeStyleDropDown extends React.Component {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     }
-
-
-
-
-
-
 
     hideDropdownMenu() {
         this.setState({ displayMenu: false }, () => {
