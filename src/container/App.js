@@ -16,8 +16,8 @@ import WishListPage from '../components/wishListPage';
 import FixedBlades from '../components/fixedBladesList';
 import SlipJoints from '../components/slipJoints';
 import Flippers from '../components/flippers';
-import Assisted from '../components/assisted';
 import Automatics from '../components/automatics';
+import Assisted from '../components/assisted';
 
 
 class App extends Component {
