@@ -3,7 +3,6 @@ import './style.css';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 
-
 class Dropdown extends React.Component {
   constructor() {
     super();

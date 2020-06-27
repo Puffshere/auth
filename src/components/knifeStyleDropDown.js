@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
 import Dropdown from '../components/dropdown';
 
 class KnifeStyleDropDown extends React.Component {
