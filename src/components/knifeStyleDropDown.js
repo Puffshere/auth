@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import ReactDOM from 'react-dom';
-import Dropdown from '../components/dropdown';
+import Dropdown from '../components/dropDown';
 
 class KnifeStyleDropdown extends React.Component {
     constructor() {

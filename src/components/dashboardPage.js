@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
+import Dropdown from '../components/dropDown';
 
 
 const CurrentDate = (props) => {
@@ -26,11 +27,11 @@ const Table = () => {
     <div>
       <table className='dashboardTableStyling'>
         <tbody>
-          {/* <tr><td className='border'><Dropdown /></td> */}
+          <tr><td className='border'><Dropdown /></td>
             <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
             <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
             <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td>
-            {/* </tr> */}
+            </tr>
         </tbody>
       </table>
     </div>
