@@ -52,7 +52,7 @@ class Flippers extends React.Component {
 
   render() {
 
-    const flipperstrue = this.state.blades.filter(i => i.flippers == true);
+    const flipperstrue = this.state.blades.filter(i => i.flipper == true);
     const renderFlippers = flipperstrue.map((i) =>
 
       <table className='container tableBackground showStopper'>
