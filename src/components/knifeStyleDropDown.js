@@ -104,7 +104,7 @@ class KnifeStyleDropdown extends React.Component {
                 }
                 {this.state.displayStyle ? (
                     <div>
-                        <div className='styleStyling dropDownStylingTitle'>{this.state.style}</div>
+                        <div className='styleStyling dropdownStylingTitle'>{this.state.style}</div>
                     </div>
                 ) :
                     (
