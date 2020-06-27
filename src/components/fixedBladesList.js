@@ -1,6 +1,6 @@
 import React, { } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Dropdown from '../components/dropdown';
+// import Dropdown from '../components/dropdown';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -26,7 +26,8 @@ const Table = () => {
     <div>
       <table className='dashboardTableStyling'>
         <tbody>
-          <tr><td className='border'><Dropdown /></td>
+          <tr>
+            {/* <td className='border'><Dropdown /></td> */}
             <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
             <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
             <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td></tr>
