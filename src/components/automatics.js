@@ -1,6 +1,6 @@
 import React, { } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Dropdown from './dropDown';
+import Dropdown from './dropdown';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
