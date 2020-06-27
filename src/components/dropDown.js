@@ -34,7 +34,7 @@ class Dropdown extends React.Component {
         <div className='dropdownStyling' onClick={this.showDropdownMenu}>Your Knives</div>
 
         {this.state.displayMenu ? (
-          <div className='dropStyling help1'>
+          <div className='help1'>
           <ul>
             <li className='help'><a href="dashboard">Dashboard</a></li>
             <li className='help'><a href="fixedBlades">Fixed Blades</a></li>
