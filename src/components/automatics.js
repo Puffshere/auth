@@ -87,8 +87,8 @@ class Automatics extends React.Component {
             <tr>
               <td className=''>Brand</td>
               <td className=''>Model</td>
-              <td className=''>Steel</td>
               <td className=''>Blade Shape</td>
+              <td className=''>Steel</td>
               <td className=''>Handle</td>
             </tr>
           </tbody>
