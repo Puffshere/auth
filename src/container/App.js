@@ -19,6 +19,7 @@ import Flippers from '../components/flippers';
 import Assisted from '../components/assisted';
 import Automatics from '../components/automatics';
 
+
 class App extends Component {
   render() {
     return (

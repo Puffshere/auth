@@ -33,6 +33,7 @@ li a {
     width: 130px;
     position: relative;
     z-index: 2;
+    background-color: rgba(138, 138, 153, 0.9);
 }
 
 .help:last-child {
@@ -40,6 +41,25 @@ li a {
 }
 
 .help:hover {
+    background-color: #e5e5e5;
+    color: white;
+}
+
+.knifeStyleDropdown {
+    padding: 8px 16px;
+    border-bottom: 1px solid #e5e5e5;
+    width: 130px;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(138, 138, 153, 0.9);
+    color: maroon;
+}
+
+.knifeStyleDropdown:last-child {
+    border-bottom: none;
+}
+
+.knifeStyleDropdown:hover {
     background-color: #e5e5e5;
     color: white;
 }
@@ -56,6 +76,23 @@ li a {
 
 @media only screen and (max-width: 450px) {
     .dropDownStyling {
+      font-size: 15px;
+    }
+}
+
+.dropDownStylingTitle {
+    color: maroon;
+    text-shadow: 1px 1px 1px #bbadad;
+    font-size: 22px;
+}
+
+.dropDownStylingTitle:hover {
+    color: rgb(53, 0, 0);
+    text-shadow: 1px 1px 1px #bbadad;
+}
+
+@media only screen and (max-width: 450px) {
+    .dropDownStylingTitle {
       font-size: 15px;
     }
 }

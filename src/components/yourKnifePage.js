@@ -32,7 +32,7 @@ class Table extends React.Component {
         return (
             <table className='dashboardTableStyling'>
                 <tbody>
-                    <tr className='dashboardTableHeadStyling'>Add Knife</tr>
+                    <tr className='dashboardTableHeadStyling'>Add a knife to your collection</tr>
                 </tbody>
             </table>
         )
