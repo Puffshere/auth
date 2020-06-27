@@ -64,35 +64,35 @@ li a {
     color: white;
 }
 
-.dropDownStyling {
+.dropdownStyling {
     color: maroon;
     text-shadow: 1px 1px 1px #bbadad;
 }
 
-.dropDownStyling:hover {
+.dropdownStyling:hover {
     color: rgb(53, 0, 0);
     text-shadow: 1px 1px 1px #bbadad;
 }
 
 @media only screen and (max-width: 450px) {
-    .dropDownStyling {
+    .dropdownStyling {
       font-size: 15px;
     }
 }
 
-.dropDownStylingTitle {
+.dropdownStylingTitle {
     color: maroon;
     text-shadow: 1px 1px 1px #bbadad;
     font-size: 22px;
 }
 
-.dropDownStylingTitle:hover {
+.dropdownStylingTitle:hover {
     color: rgb(53, 0, 0);
     text-shadow: 1px 1px 1px #bbadad;
 }
 
 @media only screen and (max-width: 450px) {
-    .dropDownStylingTitle {
+    .dropdownStylingTitle {
       font-size: 15px;
     }
 }

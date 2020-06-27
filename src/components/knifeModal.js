@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { addKnifeAction } from "../actions/authenticationActions";
 import { connect } from 'react-redux';
-import KnifeStyleDropDown from './knifeStyleDropDown';
+import KnifeStyleDropdown from './knifeStyleDropdown';
 
 class KnifeModal extends Component {
     onHandleSave = (event) => {
@@ -33,7 +33,7 @@ class KnifeModal extends Component {
                 <form onSubmit={this.onHandleSave}>
                     <br></br>
                     <div>
-                        <KnifeStyleDropDown />
+                        <KnifeStyleDropdown />
                         <br></br>
                         <br></br>
                         <label htmlFor="brand"></label>

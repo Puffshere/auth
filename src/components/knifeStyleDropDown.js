@@ -3,7 +3,7 @@ import './style.css';
 import ReactDOM from 'react-dom';
 import Dropdown from '../components/dropdown';
 
-class KnifeStyleDropDown extends React.Component {
+class KnifeStyleDropdown extends React.Component {
     constructor() {
         super();
 
@@ -79,7 +79,7 @@ class KnifeStyleDropDown extends React.Component {
 
             <div className="dropdown">
                 {this.state.titleDisplay ? (
-                    <div className='dropDownStylingTitle' onClick={this.showDropdownMenu}>Select Knife Style</div>
+                    <div className='dropdownStylingTitle' onClick={this.showDropdownMenu}>Select Knife Style</div>
                 ) :
                     (
                         null
@@ -89,12 +89,12 @@ class KnifeStyleDropDown extends React.Component {
                 {this.state.displayMenu ? (
                     <div className='dropStyling help1'>
                         <ul>
-                            <li className='knifeStyleDropdown dropDownStyling' onClick={this.showDisplayStyle1}>Fixed Blade</li>
-                            <li className='knifeStyleDropdown dropDownStyling' onClick={this.showDisplayStyle2}>Slip Joint</li>
-                            <li className='knifeStyleDropdown dropDownStyling' onClick={this.showDisplayStyle3}>Flipper</li>
-                            <li className='knifeStyleDropdown dropDownStyling' onClick={this.showDisplayStyle4}>Automatic</li>
-                            <li className='knifeStyleDropdown dropDownStyling' onClick={this.showDisplayStyle5}>Assisted</li>
-                            <li className='knifeStyleDropdown dropDownStyling' onClick={this.showDisplayStyle6}>Thumb Stud</li>
+                            <li className='knifeStyleDropdown dropdownStyling' onClick={this.showDisplayStyle1}>Fixed Blade</li>
+                            <li className='knifeStyleDropdown dropdownStyling' onClick={this.showDisplayStyle2}>Slip Joint</li>
+                            <li className='knifeStyleDropdown dropdownStyling' onClick={this.showDisplayStyle3}>Flipper</li>
+                            <li className='knifeStyleDropdown dropdownStyling' onClick={this.showDisplayStyle4}>Automatic</li>
+                            <li className='knifeStyleDropdown dropdownStyling' onClick={this.showDisplayStyle5}>Assisted</li>
+                            <li className='knifeStyleDropdown dropdownStyling' onClick={this.showDisplayStyle6}>Thumb Stud</li>
                         </ul>
                     </div>
                 ) :
@@ -123,4 +123,4 @@ var displayDropdown = (
 );
 
 ReactDOM.render(displayDropdown, document.getElementById('root'));
-export default KnifeStyleDropDown;
+export default KnifeStyleDropdown;
