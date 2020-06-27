@@ -50,23 +50,9 @@ class DashboardPage extends Component {
       .catch(console.log)
   }
 
-
-
-
-
-
-
   onHandleLogin = (event) => {
     event.preventDefault();
   }
-
-
-
-
-
-
-
-
 
   UNSAFE_componentDidMount() {
     document.title = 'React Login';
@@ -129,7 +115,6 @@ class DashboardPage extends Component {
             </tr>
           </tbody>
         </table>
-        {/* <Table className='tableStyling' /> */}
         {renderAllKnives}
       </div>
     );
