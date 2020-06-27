@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { addKnifeAction } from "../actions/authenticationActions";
 import { connect } from 'react-redux';
-import KnifeStyleDropdown from './knifeStyleDropdown';
+import KnifeStyleDropdown from './knifeStyleDropDown';
 
 class KnifeModal extends Component {
     onHandleSave = (event) => {
