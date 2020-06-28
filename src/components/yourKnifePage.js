@@ -2,7 +2,6 @@ import React, { } from 'react';
 import KnifeModal from '../components/knifeModal';
 import { Link } from 'react-router-dom';
 
-
 const CurrentDate = (props) => {
     var tempDate = new Date();
     var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
