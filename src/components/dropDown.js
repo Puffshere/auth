@@ -36,13 +36,13 @@ class Dropdown extends React.Component {
         {this.state.displayMenu ? (
           <div className='help1'>
           <ul>
-            <li className='help'><a href="dashboard">Dashboard</a></li>
-            <li className='help'><a href="fixedBlades">Fixed Blades</a></li>
-            <li className='help'><a href="slipJoints">Slip Joints</a></li>
-            <li className='help'><a href="flippers">Flippers</a></li>
-            <li className='help'><a href="automatics">Automatic</a></li>
-            <li className='help'><a href="assisted">Assisted</a></li>
-            <li className='help'><Link className='dashboardLinkStyling' to='yourKnives'>Add Knife</Link></li>
+            <a href="dashboard" className='mainDropStyling dashboardLinkStyling'><li className='help'>Dashboard</li></a>
+            <a href="fixedBlades" className='mainDropStyling dashboardLinkStyling'><li className='help'>Fixed Blades</li></a>
+            <a href="slipJoints" className='mainDropStyling dashboardLinkStyling'><li className='help'>Slip Joints</li></a>
+            <a href="flippers" className='mainDropStyling dashboardLinkStyling'><li className='help'>Flippers</li></a>
+            <a href="automatics" className='mainDropStyling dashboardLinkStyling'><li className='help'>Automatic</li></a>
+            <a href="assisted" className='mainDropStyling dashboardLinkStyling'><li className='help'>Assisted</li></a>
+            <Link className='dashboardLinkStyling mainDropStyling' to='yourKnives'><li className='help'>Add Knife</li></Link>
           </ul>
           </div>
         ) :

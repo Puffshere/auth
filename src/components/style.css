@@ -17,32 +17,28 @@ ul {
     width: 20px;
 }
 
-li a:hover {
-    color: rgb(46, 1, 1);
-    text-decoration: none;
-}
-
-li a {
+.mainDropStyling {
     color: #000;
     text-decoration: none;
     color: maroon;
 }
+
+.mainDropStyling:hover {
+    color: rgb(46, 1, 1);
+    text-decoration: none;
+}
+
 .help {
     padding: 8px 16px;
-    border-bottom: 1px solid #e5e5e5;
     width: 130px;
     position: relative;
     z-index: 2;
     background-color: rgba(138, 138, 153, 0.9);
-}
-
-.help:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .help:hover {
     background-color: #e5e5e5;
-    color: white;
 }
 
 .knifeStyleDropdown {
@@ -53,10 +49,6 @@ li a {
     z-index: 2;
     background-color: rgba(138, 138, 153, 0.9);
     color: maroon;
-}
-
-.knifeStyleDropdown:last-child {
-    border-bottom: none;
 }
 
 .knifeStyleDropdown:hover {
