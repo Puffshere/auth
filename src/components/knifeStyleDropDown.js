@@ -6,12 +6,17 @@ import Dropdown from '../components/dropDown';
 class KnifeStyleDropdown extends React.Component {
     constructor() {
         super();
-
         this.state = {
             displayMenu: false,
             displayStyle: false,
             style: "",
             titleDisplay: true,
+            fixedBlade: false,
+            slipJoint: false,
+            flipper: false,
+            automatic: false,
+            assisted: false,
+            thumbStud: false,
         };
 
         this.showDropdownMenu = this.showDropdownMenu.bind(this);
@@ -33,37 +38,37 @@ class KnifeStyleDropdown extends React.Component {
 
     showDisplayStyle1(event) {
         event.preventDefault();
-        this.setState({ displayStyle: true, style: "Fixed Blade", titleDisplay: false }, () => {
+        this.setState({ displayStyle: true, style: "Fixed Blade", titleDisplay: false, fixedBlade: true }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     }
     showDisplayStyle2(event) {
         event.preventDefault();
-        this.setState({ displayStyle: true, style: "Slip Joint", titleDisplay: false }, () => {
+        this.setState({ displayStyle: true, style: "Slip Joint", titleDisplay: false, slipJoint: true }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     }
     showDisplayStyle3(event) {
         event.preventDefault();
-        this.setState({ displayStyle: true, style: "Flipper", titleDisplay: false }, () => {
+        this.setState({ displayStyle: true, style: "Flipper", titleDisplay: false, flipper: true }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     }
     showDisplayStyle4(event) {
         event.preventDefault();
-        this.setState({ displayStyle: true, style: "Automatic", titleDisplay: false }, () => {
+        this.setState({ displayStyle: true, style: "Automatic", titleDisplay: false, automatic: true }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     }
     showDisplayStyle5(event) {
         event.preventDefault();
-        this.setState({ displayStyle: true, style: "Assisted", titleDisplay: false }, () => {
+        this.setState({ displayStyle: true, style: "Assisted", titleDisplay: false, assisted: true }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     }
     showDisplayStyle6(event) {
         event.preventDefault();
-        this.setState({ displayStyle: true, style: "Thumb Stud", titleDisplay: false }, () => {
+        this.setState({ displayStyle: true, style: "Thumb Stud", titleDisplay: false, thumbStud: true }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     }
@@ -73,6 +78,8 @@ class KnifeStyleDropdown extends React.Component {
             document.removeEventListener('click', this.hideDropdownMenu);
         });
     }
+
+
 
     render() {
         return (

@@ -18,14 +18,21 @@ class KnifeModal extends Component {
         const knifeData = {
             brand, model, price, steel, bladeShape, forSale, forSalePrice
         };
+
+
+
+
+        
+
         this.props.dispatch(addKnifeAction(knifeData));
+
         console.log(knifeData.bladeShape);
+
         this.saveNewKnife = this.saveNewKnife.bind(this);
     }
     UNSAFE_componentDidMount() {
         document.title = 'Knife Modal';
     }
-
 
     render() {
         return (

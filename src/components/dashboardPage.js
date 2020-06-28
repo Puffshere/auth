@@ -4,7 +4,6 @@ import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
 import Dropdown from '../components/dropDown';
 
-
 const CurrentDate = (props) => {
   var tempDate = new Date();
   var date = (tempDate.getMonth() + 1) + '/' + tempDate.getDate() + '/' + tempDate.getFullYear();
@@ -31,7 +30,7 @@ const Table = () => {
             <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
             <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
             <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td>
-            </tr>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -64,20 +63,20 @@ class DashboardPage extends Component {
     const allKnivestrue = this.state.blades.filter(i => i.allKnives == true);
     const renderAllKnives = allKnivestrue.map((i) =>
 
-    <table className='container tableBackground showStopper'>
-    <thead>
-    </thead>
-    <tbody>
-      <tr>
-        <td className='show1 shane'>{i.brand}</td>
-        <td className='show1 shane'>{i.model}</td>
-        <td className='show1 shane'>{i.bladeShape}</td>
-        <td className='show1 shane'>{i.steel}</td>
-        <td className='show1 shane'>${i.price}</td>
-      </tr>
-    </tbody>
-  </table>
-);
+      <table className='container tableBackground showStopper'>
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <td className='show1 shane'>{i.brand}</td>
+            <td className='show1 shane'>{i.model}</td>
+            <td className='show1 shane'>{i.bladeShape}</td>
+            <td className='show1 shane'>{i.steel}</td>
+            <td className='show1 shane'>${i.price}</td>
+          </tr>
+        </tbody>
+      </table>
+    );
 
     let isSuccess;
     let message;
