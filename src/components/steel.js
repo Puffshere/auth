@@ -1,13 +1,13 @@
 import React from 'react';
 import './style.css';
 
-class Brand extends React.Component {
+class Steel extends React.Component {
     constructor() {
         super();
         this.state = {
             displayMenu: false,
             displayStyle: false,
-            brand: "",
+            steel: "",
             titleDisplay: true,
             knifeData: [],
         };
@@ -32,7 +32,7 @@ class Brand extends React.Component {
 
     save(event) {
         event.preventDefault();
-        this.setState({ displayStyle: true, brand: "Benchmade", titleDisplay: false, fixedBlade: true }, () => {
+        this.setState({ displayStyle: true, steel: "CPM-S35VN", titleDisplay: false }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
         });
     }
@@ -42,7 +42,7 @@ class Brand extends React.Component {
                 <div className="dropdown">
                 {this.state.titleDisplay ? (
                     <div>
-                        <input placeholder='Brand'  classname='inputStyling' onBlur={this.save} type='text' id='brand' name='text'></input>
+                        <input placeholder='Steel' onBlur={this.save} type='text' id='steel' name='text'></input>
                     </div>
                 ) :
                     (
@@ -51,7 +51,7 @@ class Brand extends React.Component {
                 }
                 {this.state.displayMenu ? (
                     <div className='dropStyling help1'>
-                        {this.state.brand}
+                        {this.state.steel}
                     </div>
                 ) :
                     (
@@ -60,7 +60,7 @@ class Brand extends React.Component {
                 }
                 {this.state.displayStyle ? (
                     <div>
-                        <div className='styleStyling dropdownStylingTitle'>{this.state.brand}</div>
+                        <div className='styleStyling dropdownStylingTitle'>{this.state.steel}</div>
                     </div>
                 ) :
                     (
@@ -72,4 +72,4 @@ class Brand extends React.Component {
     }
 }
 
-export default Brand;
+export default Steel;

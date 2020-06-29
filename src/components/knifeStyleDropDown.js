@@ -90,7 +90,7 @@ class KnifeStyleDropdown extends React.Component {
 
             <div className="dropdown">
                 {this.state.titleDisplay ? (
-                    <div className='dropdownStylingTitle' onClick={this.showDropdownMenu}>Select Knife Style</div>
+                    <button className='dropdownStylingTitle addKnifeSaveButton'  onClick={this.showDropdownMenu}>Select Knife Style</button>
                 ) :
                     (
                         null

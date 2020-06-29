@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import KnifeStyleDropdown from './knifeStyleDropDown';
 // import AddData from '../components/postData';
 import Brand from '../components/brand';
+import Model from '../components/model';
+import Price from '../components/price';
+import Steel from '../components/steel';
+import BladeShape from '../components/bladeShape';
+import HandleMaterial from '../components/handleMaterial';
 
 
 
@@ -40,7 +45,7 @@ class KnifeModal extends Component {
         document.title = 'Knife Modal';
     }
 
-    
+
 
     render() {
         return (
@@ -55,20 +60,19 @@ class KnifeModal extends Component {
                         <Brand />
                         <br></br>
                         <br></br>
-                        <label htmlFor="model"></label>
-                        <input type="model" placeholder='Model' name="model" id="model" />
+                        <Model />
                         <br></br>
                         <br></br>
-                        <label htmlFor="price"></label>
-                        <input type="price" placeholder='Price Paid' name="price" id="price" />
+                        <Price />
                         <br></br>
                         <br></br>
-                        <label htmlFor="steel"></label>
-                        <input type="steel" placeholder='Knife Steel' name="steel" id="steel" />
+                        <Steel />
                         <br></br>
                         <br></br>
-                        <label htmlFor="bladeShape"></label>
-                        <input type="bladeShape" placeholder='Blade Shape' name="bladeShape" id="bladeShape" />
+                        <BladeShape />
+                        <br></br>
+                        <br></br>
+                        <HandleMaterial />
                         <br></br>
                         <br></br>
                         <button className='addKnifeSaveButton'>Save</button>

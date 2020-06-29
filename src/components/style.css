@@ -73,19 +73,36 @@ ul {
 }
 
 .dropdownStylingTitle {
-    color: maroon;
-    text-shadow: 1px 1px 1px #bbadad;
-    font-size: 22px;
+    font-size: 20px;
 }
 
-.dropdownStylingTitle:hover {
-    color: rgb(53, 0, 0);
-    text-shadow: 1px 1px 1px #bbadad;
+@media only screen and (min-width: 1020px) {
+    .dropdownStylingTitle {
+        font-size: 21px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .dropdownStylingTitle {
+        font-size: 21px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .dropdownStylingTitle {
+        font-size: 21px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .dropdownStylingTitle {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
     .dropdownStylingTitle {
-      font-size: 15px;
+        font-size: 21px;
     }
 }
 
