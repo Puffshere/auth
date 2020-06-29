@@ -39,7 +39,8 @@ const Table = () => {
 
 class DashboardPage extends Component {
   state = {
-    blades: []
+    blades: [],
+    checkbox: false,
   }
 
   componentDidMount() {
@@ -70,9 +71,18 @@ class DashboardPage extends Component {
           <tr>
             <td className='show1 shane'>{i.brand}</td>
             <td className='show1 shane'>{i.model}</td>
-            <td className='show1 shane'>{i.bladeShape}</td>
+            {/* <td className='show1 shane'>{i.bladeShape}</td> */}
             <td className='show1 shane'>{i.steel}</td>
             <td className='show1 shane'>${i.price}</td>
+            <td className='show1 shane forSaleMargins'>
+              <checkbox>
+                <div class="checkbox-example">
+                  <input type="checkbox" value="1" id="checkboxOneInput" />
+                  <label for="checkboxOneInput"></label>
+                </div>
+              </checkbox>
+              {i.forSale}
+            </td>
           </tr>
         </tbody>
       </table>
@@ -108,9 +118,9 @@ class DashboardPage extends Component {
             <tr>
               <td className=''>Brand</td>
               <td className=''>Model</td>
-              <td className=''>Blade Shape</td>
               <td className=''>Steel</td>
               <td className=''>Price</td>
+              <td className=''>For Sale</td>
             </tr>
           </tbody>
         </table>
