@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
@@ -53,7 +53,7 @@ class FixedBlades extends React.Component {
 
   render() {
 
-    const fixedBladetrue = this.state.blades.filter(i => i.fixedBlade == true);
+    const fixedBladetrue = this.state.blades.filter(i => i.fixedBlade === true);
     const renderFixedBlades = fixedBladetrue.map((i) =>
 
       <table className='container tableBackground showStopper'>

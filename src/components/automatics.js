@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
@@ -52,7 +52,7 @@ class Automatics extends React.Component {
 
   render() {
 
-    const automaticstrue = this.state.blades.filter(i => i.automatic == true);
+    const automaticstrue = this.state.blades.filter(i => i.automatic === true);
     const renderAutomatics = automaticstrue.map((i) =>
 
       <table className='container tableBackground showStopper'>

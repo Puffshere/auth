@@ -37,3 +37,23 @@ export const loginUserService = (request) => {
       return json;
     });
 };
+
+export const dataService = (request) => {
+  const DATA_ENDPOINT = 'http://localhost:3000/api/blades?access_token=5e3600914e63efce06c8cee3';
+
+  const parameters = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(request.user)
+  };
+
+  return fetch(DATA_ENDPOINT, parameters)
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      return json;
+    });
+};

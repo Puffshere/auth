@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
@@ -52,7 +52,7 @@ class SlipJoints extends React.Component {
 
   render() {
 
-    const slipJointtrue = this.state.blades.filter(i => i.slipJoint == true);
+    const slipJointtrue = this.state.blades.filter(i => i.slipJoint === true);
     const renderSlipJoints = slipJointtrue.map((i) =>
 
       <table className='container tableBackground showStopper'>

@@ -60,7 +60,7 @@ class DashboardPage extends Component {
   }
 
   render() {
-    const allKnivestrue = this.state.blades.filter(i => i.allKnives == true);
+    const allKnivestrue = this.state.blades.filter(i => i.allKnives === true);
     const renderAllKnives = allKnivestrue.map((i) =>
 
       <table className='container tableBackground showStopper'>
@@ -79,11 +79,9 @@ class DashboardPage extends Component {
     );
 
     let isSuccess;
-    let message;
 
     if (this.props.response.login.hasOwnProperty('response')) {
       isSuccess = this.props.response.login.response.success;
-      message = this.props.response.login.response.message;
 
       if (isSuccess) {
         setCookie('token', this.props.response.login.response.token, 1);

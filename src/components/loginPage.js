@@ -36,7 +36,7 @@ class LoginPage extends Component {
     
     return (
       <div className='loginPage'>
-        <h1 className='loginPageTitle'>BladeX</h1>
+        <h1 className='loginMargins'>BladeX</h1>
         <h3>Login Page</h3>
         {!isSuccess ? <div>{message}</div> : <Redirect to='dashboard' />}
         <form onSubmit={this.onHandleLogin}>

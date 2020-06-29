@@ -6,4 +6,6 @@ export const LOGIN_USER = 'LOGIN_USER';
 export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS';
 export const LOGIN_USER_ERROR = 'LOGIN_USER_ERROR';
 
-export const ADD_KNIFE = 'ADD_KNIFE';
+export const DATA = 'DATA';
+export const DATA_SUCCESS = 'DATA_SUCCESS';
+export const DATA_ERROR = 'DATA_ERROR';

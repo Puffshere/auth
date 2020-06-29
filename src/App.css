@@ -10,6 +10,12 @@ html {
   text-align: center;
 }
 
+.loginMargins {
+  text-shadow: 2px 2px 2px white;
+  color: maroon;
+  padding-top: 20px;
+}
+
 .loginPageTitle {
   text-shadow: 2px 2px 2px white;
   color: maroon;
@@ -187,7 +193,7 @@ tr {
 .show {
   color: maroon;
   cursor: pointer;
-  padding-left: 22px;
+  padding-left: 15px;
 }
 
 @media only screen and (max-width: 450px) {
@@ -227,13 +233,13 @@ tr {
 
 @media only screen and (max-width: 450px) {
   .show1 {
-    font-size: 9px;
+    font-size: 6px;
   }
 }
 
 @media only screen and (max-width: 350px) {
   .show1 {
-    font-size: 8px;
+    font-size: 4px;
   }
 }
 

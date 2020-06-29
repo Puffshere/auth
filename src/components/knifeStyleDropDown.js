@@ -4,8 +4,12 @@ import ReactDOM from 'react-dom';
 import Dropdown from '../components/dropDown';
 
 class KnifeStyleDropdown extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.state = {
+            brand: props.brand,
+            model: props.model,
+        }
         this.state = {
             displayMenu: false,
             displayStyle: false,

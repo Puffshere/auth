@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
@@ -52,7 +52,7 @@ class WishList extends React.Component {
 
   render() {
 
-    const wishListtrue = this.state.blades.filter(i => i.wishList == true);
+    const wishListtrue = this.state.blades.filter(i => i.wishList === true);
     const renderWishList = wishListtrue.map((i) =>
 
       <table className='container tableBackground showStopper'>

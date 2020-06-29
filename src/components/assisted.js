@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
@@ -52,7 +52,7 @@ class Assisted extends React.Component {
 
   render() {
 
-    const assistedtrue = this.state.blades.filter(i => i.assisted == true);
+    const assistedtrue = this.state.blades.filter(i => i.assisted === true);
     const renderAssisted = assistedtrue.map((i) =>
 
       <table className='container tableBackground showStopper'>

@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
-import { addKnifeAction } from "../actions/authenticationActions";
+import { dataAction } from "../actions/authenticationActions";
 import { connect } from 'react-redux';
 import KnifeStyleDropdown from './knifeStyleDropDown';
+// import AddData from '../components/postData';
+import Brand from '../components/brand';
+
+
+
+
 
 class KnifeModal extends Component {
+    state = {
+        brand: [
+        ]
+    }
+
     onHandleSave = (event) => {
         event.prevent.Default();
-        
+
         let brand = event.target.brand.value;
         let model = event.target.model.value;
         let price = event.target.price.value;
@@ -14,17 +25,12 @@ class KnifeModal extends Component {
         let bladeShape = event.target.bladeShape.value;
         let forSale = event.target.forSale.value;
         let forSalePrice = event.target.forSalePrice.value;
-        
+
         const knifeData = {
             brand, model, price, steel, bladeShape, forSale, forSalePrice
         };
 
-
-
-
-        
-
-        this.props.dispatch(addKnifeAction(knifeData));
+        this.props.dispatch(dataAction(knifeData));
 
         console.log(knifeData.bladeShape);
 
@@ -34,17 +40,19 @@ class KnifeModal extends Component {
         document.title = 'Knife Modal';
     }
 
+    
+
     render() {
         return (
             <div>
                 <form onSubmit={this.onHandleSave}>
-                    <br></br>
                     <div>
+                        {/* <AddData /> */}
+                        <br></br>
                         <KnifeStyleDropdown />
                         <br></br>
                         <br></br>
-                        <label htmlFor="brand"></label>
-                        <input type="brand" placeholder='Brand' name="brand" id="brand" />
+                        <Brand />
                         <br></br>
                         <br></br>
                         <label htmlFor="model"></label>

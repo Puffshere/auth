@@ -35,7 +35,7 @@ class RegisterPage extends Component {
 
     return (
       <div className="registerPage">
-        <h1 className='loginPageTitle'>BladeX</h1>
+        <h1 className='loginMargins'>BladeX</h1>
         <h3>RegisterPage</h3>
         {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
         <form onSubmit={this.onHandleRegistration}>

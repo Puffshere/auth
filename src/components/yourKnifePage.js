@@ -1,6 +1,7 @@
 import React, { } from 'react';
 import KnifeModal from '../components/knifeModal';
 import { Link } from 'react-router-dom';
+import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
     var tempDate = new Date();
@@ -21,23 +22,23 @@ const SignOut = (props) => {
     )
 }
 
-class Table extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            input: '',
-        };
-    }
-    render() {
-        return (
-            <table className='dashboardTableStyling'>
-                <tbody>
-                    <tr className='dashboardTableHeadStyling'>Add a knife to your collection</tr>
-                </tbody>
-            </table>
-        )
-    }
-}
+const Table = () => {
+    return (
+      <div>
+        <table className='dashboardTableStyling'>
+          <tbody>
+            <tr><td className='border'><Dropdown /></td>
+              <td className='border'><Link className='dashboardLinkStyling' to='forSale'>For Sale</Link></td>
+              <td className='border'><Link className='dashboardLinkStyling' to='edcRotation'>EDC Rotation</Link></td>
+              <td className='border'><Link className='dashboardLinkStyling' to='wishList'>Wish List</Link></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+
+
 
 class YourKnifePage extends React.Component {
     constructor(props) {

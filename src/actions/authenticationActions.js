@@ -14,9 +14,9 @@ export const loginUserAction = (user) => {
   }
 };
 
-export const addKnifeAction = (knife) => {
+export const dataAction = (data) => {
   return {
-    type: types.ADD_KNIFE,
-    knife
+    type: types.DATA,
+    data
   }
 };

@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Dropdown from '../components/dropDown';
 
 const CurrentDate = (props) => {
@@ -53,7 +53,7 @@ class ForSalePage extends React.Component {
 
   render() {
 
-    const forSaleTrue = this.state.blades.filter(i => i.forSale == true);
+    const forSaleTrue = this.state.blades.filter(i => i.forSale === true);
     const renderForSale = forSaleTrue.map((i) =>
 
       <table className='container tableBackground showStopper'>
