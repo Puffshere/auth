@@ -2,17 +2,12 @@ import React, { Component } from 'react';
 import { dataAction } from "../actions/authenticationActions";
 import { connect } from 'react-redux';
 import KnifeStyleDropdown from './knifeStyleDropDown';
-// import AddData from '../components/postData';
 import Brand from '../components/brand';
 import Model from '../components/model';
 import Price from '../components/price';
 import Steel from '../components/steel';
 import BladeShape from '../components/bladeShape';
 import HandleMaterial from './handleMaterial';
-
-
-
-
 
 class KnifeModal extends Component {
     state = {
@@ -45,14 +40,11 @@ class KnifeModal extends Component {
         document.title = 'Knife Modal';
     }
 
-
-
     render() {
         return (
             <div>
                 <form onSubmit={this.onHandleSave}>
                     <div>
-                        {/* <AddData /> */}
                         <br></br>
                         <KnifeStyleDropdown />
                         <br></br>

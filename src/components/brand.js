@@ -38,11 +38,11 @@ class Brand extends React.Component {
     }
 
     render() {
-            return (
-                <div className="dropdown">
+        return (
+            <div className="dropdown">
                 {this.state.titleDisplay ? (
                     <div>
-                        <input placeholder='Brand'  classname='inputStyling' onBlur={this.save} type='text' id='brand' name='text'></input>
+                        <input placeholder='Brand' classname='inputStyling' onBlur={this.save} type='text' id='brand' name='text'></input>
                     </div>
                 ) :
                     (

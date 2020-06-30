@@ -20,7 +20,6 @@ import Automatics from '../components/automatics';
 import Assisted from '../components/assisted';
 import BladeDetails from '../components/bladeDetails';
 
-
 class App extends Component {
   render() {
     return (

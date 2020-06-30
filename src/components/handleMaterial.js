@@ -38,11 +38,11 @@ class HandleMaterial extends React.Component {
     }
 
     render() {
-            return (
-                <div className="dropdown">
+        return (
+            <div className="dropdown">
                 {this.state.titleDisplay ? (
                     <div>
-                        <input placeholder='Handle Material'  classname='inputStyling' onBlur={this.save} type='text' id='handleMaterial' name='text'></input>
+                        <input placeholder='Handle Material' classname='inputStyling' onBlur={this.save} type='text' id='handleMaterial' name='text'></input>
                     </div>
                 ) :
                     (

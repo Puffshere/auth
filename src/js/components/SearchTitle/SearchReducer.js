@@ -3,7 +3,7 @@ const defaultState = {
     movies: [],
 };
 
-export default function SearchReducer (state = defaultState, action) {
+export default function SearchReducer(state = defaultState, action) {
     const { type, payload } = action;
 
     switch (type) {

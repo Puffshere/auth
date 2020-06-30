@@ -38,8 +38,8 @@ class Steel extends React.Component {
     }
 
     render() {
-            return (
-                <div className="dropdown">
+        return (
+            <div className="dropdown">
                 {this.state.titleDisplay ? (
                     <div>
                         <input placeholder='Steel' onBlur={this.save} type='text' id='steel' name='text'></input>

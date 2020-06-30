@@ -38,8 +38,8 @@ class Model extends React.Component {
     }
 
     render() {
-            return (
-                <div className="dropdown">
+        return (
+            <div className="dropdown">
                 {this.state.titleDisplay ? (
                     <div>
                         <input placeholder='Model' onBlur={this.save} type='text' id='model' name='text'></input>

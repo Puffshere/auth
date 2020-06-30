@@ -38,8 +38,8 @@ class Price extends React.Component {
     }
 
     render() {
-            return (
-                <div className="dropdown">
+        return (
+            <div className="dropdown">
                 {this.state.titleDisplay ? (
                     <div>
                         <input placeholder='Price' onBlur={this.save} type='text' id='price' name='text'></input>

@@ -181,6 +181,10 @@ tr {
   max-width: 20px;
   border-top: 0.125em solid #333;
 }
+.shane5 {
+  max-width: 20px;
+  border-top: 0.125em solid #333;
+}
 
 .shane1 {
   max-width: 20px;
@@ -249,6 +253,43 @@ tr {
 }
 
 .show1:hover {
+  background-color: maroon;
+  color: whitesmoke;
+  box-shadow: #420808 
+  -1px 1px,
+  #3d0909 -2px 2px, 
+  #490909 -3px 3px,
+  #490909 -4px 4px,
+  #490808 -5px 5px, 
+  #410808 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all; 
+  transition-timing-function: line;
+}
+
+.show5 {
+  color: maroon;
+  cursor: pointer;
+  position: relative;
+  float: left;
+  min-width: 30px;
+}
+
+@media only screen and (max-width: 450px) {
+  .show5 {
+    font-size: 6px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .show5 {
+    font-size: 4px;
+  }
+}
+
+.show5:hover {
   background-color: maroon;
   color: whitesmoke;
   box-shadow: #420808 
@@ -527,27 +568,32 @@ h3 {
 }
 
 .top {
-  margin-top: 15px;
+  margin-top: 22px;
 }
 
 .top1 {
-  margin-top: 10px;
+  margin-top: 15px;
+}
+
+.top3 {
+  margin-top: 0px;
 }
 
 .top2 {
   margin-top: 20px;
 }
 
+.top5 {
+  margin-top: 23px;
+}
+
+.top4 {
+  margin-top: -22px;
+}
+
 .hat {
   margin-top: -10px;
 }
-
-
-
-
-
-
-
 
 .animal {
   background: rgba(73, 73, 82, 0.781);
@@ -600,10 +646,6 @@ color: #f36363;
 color: #7d9ec1;
 }
 
-.middle {
-
-}
-
 .detailsStyling {
   text-shadow: 1px 1px 1px #6a2424;
   color: #898a99;
@@ -613,4 +655,8 @@ color: #7d9ec1;
   text-shadow: 1px 1px 1px #6a2424;
   text-decoration: none;
   color: #f7f7f7;
+}
+
+.mud {
+  margin-top: 20px;
 }

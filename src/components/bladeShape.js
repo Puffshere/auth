@@ -38,8 +38,8 @@ class BladeShape extends React.Component {
     }
 
     render() {
-            return (
-                <div className="dropdown">
+        return (
+            <div className="dropdown">
                 {this.state.titleDisplay ? (
                     <div>
                         <input placeholder='Blade Shape' onBlur={this.save} type='text' id='bladeShape' name='text'></input>

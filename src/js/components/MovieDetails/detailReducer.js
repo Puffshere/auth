@@ -2,7 +2,7 @@ const defaultState = {
     movie: {},
 };
 
-export default function detailReducer (state = defaultState, action) {
+export default function detailReducer(state = defaultState, action) {
     const { type, payload } = action;
 
     switch (type) {

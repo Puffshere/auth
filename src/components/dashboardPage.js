@@ -62,6 +62,7 @@ class DashboardPage extends Component {
   }
 
   render() {
+
     const allKnivestrue = this.state.blades.filter(i => i.allKnives === true);
     const renderAllKnives = allKnivestrue.map((i) =>
 
@@ -70,12 +71,11 @@ class DashboardPage extends Component {
         </thead>
         <tbody>
           <tr>
-          <Link className='dashboardLinkStyling' to='bladeDetails'><td className='show3'>{i.id}</td></Link>
+            <Link className='dashboardLinkStyling' to='bladeDetails'><td className='show3'>{i.id}</td></Link>
             <td className='show1 shane'>{i.brand}</td>
             <td className='show1 shane'>{i.model}</td>
             <td className='show1 shane'>{i.steel}</td>
             <td className='show1 shane'>${i.price}</td>
-
             <td className='show2 shane forSaleMargins'>
               <checkbox>
                 <div class="checkbox-example checkMargins">
@@ -83,12 +83,8 @@ class DashboardPage extends Component {
                   <label for="checkboxOneInput"></label>
                 </div>
               </checkbox>
-
-
               {i.forSale}
             </td>
-
-
           </tr>
         </tbody>
       </table>
@@ -110,40 +106,6 @@ class DashboardPage extends Component {
         <SignOut />
         <div className='column1'>
           <h1 className='loginPageTitle'>BladeX</h1>
-          
-
-          {/* <div className='pepper'>
-            <div className="container salt">
-              <div id="myCarousel" className="carousel slide" data-ride="carousel">
-
-                <ol className="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-
-                <div className="carousel-inner">
-                  <div className="item active">
-                    <img src="knife2.png"></img>
-                  </div>
-
-                  <div className="item">
-                    <img src="knife1.jpg"></img>
-                  </div>
-
-                </div>
-
-                <a className="left carousel-control" href="#myCarousel" data-slide="prev">
-                  <span className="glyphicon glyphicon-chevron-left"></span>
-                  <span className="sr-only">Previous</span>
-                </a>
-                <a className="right carousel-control" href="#myCarousel" data-slide="next">
-                  <span className="glyphicon glyphicon-chevron-right"></span>
-                  <span className="sr-only">Next</span>
-                </a>
-              </div>
-            </div> */}
-
           <div className='dateStyling'>
             <CurrentDate date={Date()} />
           </div>
@@ -167,9 +129,7 @@ class DashboardPage extends Component {
           </tbody>
         </table>
         {renderAllKnives}
-        
       </div>
-      // </div>
     );
   }
 }

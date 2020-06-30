@@ -1,35 +1,3 @@
-// import React, { Component } from 'react';
-// import knifeModal from '../components/knifeModal';
-
-// class PostData extends Component {
-//     state = {
-//         blades: []
-//     }
-
-//     componentDidMount() {
-//         post('http://localhost:3000/api/blades?access_token=5e3600914e63efce06c8cee3')
-//             .then(res => res.json())
-//             .then((knifeData) => {
-//                 this.setState({ blades: knifeData })
-//             })
-//             .catch(console.log)
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//             <KnifeModal blades={this.state.knifeData} />
-//             </div>
-//         )
-//     }
-// }
-
-// export default PostData
-
-
-
-
-
 import React, { Component } from 'react';
 
 class AddData extends Component {
@@ -73,24 +41,3 @@ class AddData extends Component {
 }
 
 export default AddData;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

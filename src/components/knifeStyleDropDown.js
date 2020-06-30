@@ -83,20 +83,17 @@ class KnifeStyleDropdown extends React.Component {
         });
     }
 
-
-
     render() {
         return (
 
             <div className="dropdown">
                 {this.state.titleDisplay ? (
-                    <button className='dropdownStylingTitle addKnifeSaveButton'  onClick={this.showDropdownMenu}>Select Knife Style</button>
+                    <button className='dropdownStylingTitle addKnifeSaveButton' onClick={this.showDropdownMenu}>Select Knife Style</button>
                 ) :
                     (
                         null
                     )
                 }
-
                 {this.state.displayMenu ? (
                     <div className='dropStyling help1'>
                         <ul>

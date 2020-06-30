@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import DashboardPage from '../components/dashboardPage'
-
-// export default class Result extends React.Component {
-//     constructor(props) {
-//         super(props);
-//     }
-
-
 
 class BladeDetails extends Component {
     state = {
         blades: [],
         id: 5,
-        //   checkbox: false,
     }
 
     componentDidMount() {
@@ -25,21 +16,10 @@ class BladeDetails extends Component {
             .catch(console.log)
     }
 
-
-
-
-
-    // componentDidMount() {
-    //     const { dispatch } = this.props;
-    //     dispatch(getDetail(this.props.movieID));
-    // }
-
     render() {
 
         const allKnivestrue = this.state.blades.filter(i => i.id === this.state.id);
         const renderAllKnives = allKnivestrue.map((i) =>
-
-
 
             <div className='row'>
                 <img className='detail col-5 mt-3 mb-3' src="knife4.jpg"></img>
@@ -52,19 +32,19 @@ class BladeDetails extends Component {
                     <p>Steel:  {i.steel}</p>
                     <p>Handle Material:  {i.handleMaterial}</p>
                     <p>Blade Shape:  {i.bladeShape}</p>
-                    <h6 style={{padding: 20 , float: "right" }}>Knife Id: {i.id}</h6>
+                    <h6 style={{ padding: 20, float: "right" }}>Knife Id: {i.id}</h6>
                 </div>
             </div>
-
         );
-        // const { movie } = this.props;
-        return (
-            <div className='container card mt-3 mb-3 p-0 space'>
-                <div className='card-body'>
-                    <div className='container'>
-                        {renderAllKnives}
 
-                        <Link className='detailsStyling' to='dashboard'>Return to DashBoard</Link>
+        return (
+            <div className='mud'>
+                <div className='container card mt-3 mb-3 p-0 space'>
+                    <div className='card-body'>
+                        <div className='container'>
+                            {renderAllKnives}
+                            <Link className='detailsStyling' to='dashboard'>Return to DashBoard</Link>
+                        </div>
                     </div>
                 </div>
             </div>
