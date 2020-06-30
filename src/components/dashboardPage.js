@@ -72,7 +72,6 @@ class DashboardPage extends Component {
             <td className='show3'>{i.id}</td>
             <td className='show1 shane'>{i.brand}</td>
             <td className='show1 shane'>{i.model}</td>
-            {/* <td className='show1 shane'>{i.bladeShape}</td> */}
             <td className='show1 shane'>{i.steel}</td>
             <td className='show1 shane'>${i.price}</td>
 
@@ -106,20 +105,10 @@ class DashboardPage extends Component {
 
     return (
       <div className='dashboard'>
-
-
-
-
-
-
-
-
-
         {!isSuccess ? <div></div> : <Redirect to='dashboard' />}
         <SignOut />
         <div className='column1'>
           <h1 className='loginPageTitle'>BladeX</h1>
-
 
           {/* <div className='pepper'>
             <div className="container salt">
@@ -131,7 +120,6 @@ class DashboardPage extends Component {
                   <li data-target="#myCarousel" data-slide-to="2"></li>
                 </ol>
 
-
                 <div className="carousel-inner">
                   <div className="item active">
                     <img src="knife2.png"></img>
@@ -141,9 +129,7 @@ class DashboardPage extends Component {
                     <img src="knife1.jpg"></img>
                   </div>
 
-
                 </div>
-
 
                 <a className="left carousel-control" href="#myCarousel" data-slide="prev">
                   <span className="glyphicon glyphicon-chevron-left"></span>
@@ -156,41 +142,33 @@ class DashboardPage extends Component {
               </div>
             </div> */}
 
-
-
-            <div className='dateStyling'>
-              <CurrentDate date={Date()} />
-            </div>
-            <h3 className='dashboardTitle'>Dashboard</h3>
+          <div className='dateStyling'>
+            <CurrentDate date={Date()} />
           </div>
-          <p className='costOfcollection'>Cost of Collection:  </p>
-          <p className='costOfCollectNum'>$858.33</p>
-          <Table className='tableStyling' />
-          <center><h2 className='allKnivesStyling'>All Knives:</h2></center>
-
-
-
-
-
-
-          <table className='container showStopper nice'>
-            <tbody>
-              <tr>
-                <td className=''>#</td>
-                <td className=''>Brand</td>
-                <td className=''>Model</td>
-                <td className=''>Steel</td>
-                <td className=''>Price</td>
-                <td className='dashTitleMargins'>For Sale</td>
-              </tr>
-            </tbody>
-          </table>
-          {renderAllKnives}
+          <h3 className='dashboardTitle'>Dashboard</h3>
         </div>
-        // </div>
+        <p className='costOfcollection'>Cost of Collection:  </p>
+        <p className='costOfCollectNum'>$858.33</p>
+        <Table className='tableStyling' />
+        <center><h2 className='allKnivesStyling'>All Knives:</h2></center>
+        <table className='container showStopper nice'>
+          <tbody>
+            <tr>
+              <td className=''>#</td>
+              <td className=''>Brand</td>
+              <td className=''>Model</td>
+              <td className=''>Steel</td>
+              <td className=''>Price</td>
+              <td className='dashTitleMargins'>For Sale</td>
+            </tr>
+          </tbody>
+        </table>
+        {renderAllKnives}
+      </div>
+      // </div>
     );
   }
 }
 
-const mapStateToProps = (response) => ({response});
+const mapStateToProps = (response) => ({ response });
 export default connect(mapStateToProps)(DashboardPage); 

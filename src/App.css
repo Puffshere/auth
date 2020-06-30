@@ -265,8 +265,6 @@ tr {
   transition-timing-function: line;
 }
 
-
-
 .show2 {
   color: maroon;
   cursor: pointer;
@@ -440,11 +438,7 @@ tr {
 }
 
 .checkbox-example {
-  /* width: 45px; */
-  /* height: 15px; */
-  /* background: #555; */
   position: relative;
-  /* border-radius: 5px; */
 }
 .checkbox-example label {
   display: block;
@@ -461,13 +455,6 @@ tr {
 .checkbox-example input[type=checkbox]:checked + label {
   left: 27px;
 } 
-
-
-
-
-
-
-
 
 input[type=checkbox] + label {
   display: block;

@@ -38,8 +38,6 @@ const Table = () => {
     )
   }
 
-
-
 class YourKnifePage extends React.Component {
     constructor(props) {
         super(props);
