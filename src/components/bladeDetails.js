@@ -47,12 +47,12 @@ class BladeDetails extends Component {
                     <h2 id='title'>{i.brand}</h2>
                     <h2 id='title'>{i.model}</h2>
                     <p>Price:  ${i.price}</p>
-                    <p>Steel:  {i.steel}</p>
+                    <h6 className='metascore'>For Sale Price:  ${i.forSalePrice}</h6>
                     <hr></hr>
+                    <p>Steel:  {i.steel}</p>
                     <p>Handle Material:  {i.handleMaterial}</p>
                     <p>Blade Shape:  {i.bladeShape}</p>
-                    <h6 className='metascore'>For Sale Price:  ${i.forSalePrice}</h6>
-                    <h6>Knife Id: {i.id}</h6>
+                    <h6 style={{padding: 20 , float: "right" }}>Knife Id: {i.id}</h6>
                 </div>
             </div>
 
