@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { setCookie } from '../utils/cookies';
 import { connect } from 'react-redux';
 import Dropdown from '../components/dropDown';
+import Search from '../js/components/SearchTitle/Search';
 
 const CurrentDate = (props) => {
   var tempDate = new Date();
@@ -69,7 +70,7 @@ class DashboardPage extends Component {
         </thead>
         <tbody>
           <tr>
-            <td className='show3'>{i.id}</td>
+          <Link className='dashboardLinkStyling' to='bladeDetails'><td className='show3'>{i.id}</td></Link>
             <td className='show1 shane'>{i.brand}</td>
             <td className='show1 shane'>{i.model}</td>
             <td className='show1 shane'>{i.steel}</td>
@@ -109,6 +110,7 @@ class DashboardPage extends Component {
         <SignOut />
         <div className='column1'>
           <h1 className='loginPageTitle'>BladeX</h1>
+          
 
           {/* <div className='pepper'>
             <div className="container salt">
@@ -150,6 +152,7 @@ class DashboardPage extends Component {
         <p className='costOfcollection'>Cost of Collection:  </p>
         <p className='costOfCollectNum'>$858.33</p>
         <Table className='tableStyling' />
+        <Search />
         <center><h2 className='allKnivesStyling'>All Knives:</h2></center>
         <table className='container showStopper nice'>
           <tbody>
@@ -164,6 +167,7 @@ class DashboardPage extends Component {
           </tbody>
         </table>
         {renderAllKnives}
+        
       </div>
       // </div>
     );

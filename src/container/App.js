@@ -18,6 +18,7 @@ import SlipJoints from '../components/slipJoints';
 import Flippers from '../components/flippers';
 import Automatics from '../components/automatics';
 import Assisted from '../components/assisted';
+import BladeDetails from '../components/bladeDetails';
 
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
             <PrivateRoute path='/flippers' component={Flippers} />
             <PrivateRoute path='/automatics' component={Automatics} />
             <PrivateRoute path='/assisted' component={Assisted} />
+            <PrivateRoute path='/bladeDetails' component={BladeDetails} />
           </Switch>
         </div>
       </BrowserRouter>

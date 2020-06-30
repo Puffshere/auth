@@ -343,6 +343,7 @@ tr {
 .allKnivesStyling {
   color: rgb(95, 0, 0);
   text-shadow: 1px 1px 1px rgb(207, 207, 207);
+  margin-top: 0px;
 }
 
 @media only screen and (max-width: 450px) {
@@ -539,4 +540,76 @@ h3 {
 
 .hat {
   margin-top: -10px;
+}
+
+
+
+
+
+
+
+
+.animal {
+  background: rgba(73, 73, 82, 0.781);
+  box-shadow: 10px 10px 10px #3e3838;
+  margin-top: -27px;
+  margin-right: -36px;
+}
+
+.cat {
+  text-align: center;
+  font-size: 750%;
+  text-shadow: 4px 4px 4px linen;
+  text-decoration-color: gray;
+}
+
+.slang {
+  box-shadow: 10px 10px 10px linen;
+  background: linear-gradient(45deg, black, transparent);
+  border: double;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.boat {
+  text-align: center;
+  font-size: 300%;
+  text-shadow: 2px 2px 4px linen;
+  color: #a26233;
+}
+
+.pop {
+background: linear-gradient(45deg, black, transparent);
+box-shadow: 10px 10px 10px white;
+}
+
+.card-body {
+background: linear-gradient(45deg, black, transparent);
+box-shadow: 10px 10px 10px #3e3838;
+}
+
+.space {
+color: #041322;
+}
+
+.sun {
+color: #f36363;
+}
+
+.moose {
+color: #7d9ec1;
+}
+
+.middle {
+
+}
+
+.detailsStyling {
+  text-shadow: 1px 1px 1px whitesmoke;
+  color: maroon;
+}
+.detailsStyling:hover {
+  text-shadow: 1px 1px 1px whitesmoke;
+  text-decoration: none;
+  color: rgb(122, 70, 70);
 }

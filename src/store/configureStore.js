@@ -2,6 +2,7 @@ import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import rootReducer from '../reducers';
+// import rootreducer from '../components/rootreducer';
 import rootSaga from '../sagas';
 
 const configureStore = () => {
@@ -14,3 +15,5 @@ const configureStore = () => {
 };
 
 export default configureStore;
+
+
