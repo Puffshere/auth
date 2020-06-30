@@ -73,36 +73,36 @@ ul {
 }
 
 .dropdownStylingTitle {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 @media only screen and (min-width: 1020px) {
     .dropdownStylingTitle {
-        font-size: 21px;
+        font-size: 18px;
     }
 }
 
 @media only screen and (max-width: 800px) {
     .dropdownStylingTitle {
-        font-size: 21px;
+        font-size: 18px;
     }
 }
 
 @media only screen and (max-width: 750px) {
     .dropdownStylingTitle {
-        font-size: 21px;
+        font-size: 18px;
     }
 }
 
 @media only screen and (max-width: 500px) {
     .dropdownStylingTitle {
-        font-size: 20px;
+        font-size: 17px;
     }
 }
 
 @media only screen and (max-width: 450px) {
     .dropdownStylingTitle {
-        font-size: 21px;
+        font-size: 18px;
     }
 }
 
