@@ -568,27 +568,39 @@ h3 {
 }
 
 .top {
-  margin-top: 22px;
+  margin-top: 25px;
 }
 
 .top1 {
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
-.top3 {
+.top8 {
   margin-top: 0px;
 }
 
+.top7 {
+  margin-top: 19px;
+}
+
+.top3 {
+  margin-top: 3px;
+}
+
 .top2 {
-  margin-top: 20px;
+  margin-top: 23px;
 }
 
 .top5 {
-  margin-top: 23px;
+  margin-top: 28px;
 }
 
 .top4 {
   margin-top: -22px;
+}
+
+.top6 {
+  margin-top: 13px;
 }
 
 .hat {
