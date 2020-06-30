@@ -56,7 +56,7 @@ class YourKnifePage extends React.Component {
                     <div className='dateStyling'>
                         <CurrentDate date={Date()} />
                     </div>
-                    <h3 className='knifePageTitle'>YourKnives</h3>
+                    <h3 className='dashboardTitle hat'>YourKnives</h3>
                 </div>
                 <Table className='tableStyling' />
                 <KnifeModal />

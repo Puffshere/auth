@@ -13,7 +13,7 @@ html {
 .loginMargins {
   text-shadow: 2px 2px 2px white;
   color: maroon;
-  padding-top: 20px;
+  padding-top: 70px;
 }
 
 .loginPageTitle {
@@ -48,7 +48,7 @@ body {
   text-shadow: .5px .5px .5px whitesmoke;
   background-color: rgb(199, 179, 179);
   box-shadow: 2px 2px 2px rgb(68, 65, 65);
-  margin-top: -16px;
+  margin-top: -10px;
 }  
 
 .forSaleTitle {
@@ -182,6 +182,11 @@ tr {
   border-top: 0.125em solid #333;
 }
 
+.shane1 {
+  max-width: 20px;
+  border-top: 0.125em solid #333;
+}
+
 .container {
   font-size: 15px; 
 }
@@ -259,6 +264,68 @@ tr {
   transition-property: all; 
   transition-timing-function: line;
 }
+
+
+
+.show2 {
+  color: maroon;
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+@media only screen and (max-width: 450px) {
+  .show2 {
+    font-size: 6px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .show2 {
+    font-size: 4px;
+  }
+}
+
+.show3 {
+  color: maroon;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 450px) {
+  .show3 {
+    font-size: 6px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .show3 {
+    font-size: 4px;
+  }
+}
+
+.show3:hover {
+  background-color: maroon;
+  color: whitesmoke;
+  box-shadow: #420808 
+  -1px 1px,
+  #3d0909 -2px 2px, 
+  #490909 -3px 3px,
+  #490909 -4px 4px,
+  #490808 -5px 5px, 
+  #410808 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all; 
+  transition-timing-function: line;
+}
+
+.dashTitleMargins {
+  max-width: 35px;
+}
+
 
 .showStopper {
   height: 10px;
@@ -368,15 +435,16 @@ tr {
 }
 
 /* --------------------------------checkbox------------------------------------ */
-input[type=checkbox] {
+ input[type=checkbox] {
   visibility: hidden;
 }
+
 .checkbox-example {
-  width: 45px;
-  height: 15px;
-  background: #555;
+  /* width: 45px; */
+  /* height: 15px; */
+  /* background: #555; */
   position: relative;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 .checkbox-example label {
   display: block;
@@ -388,8 +456,100 @@ input[type=checkbox] {
   position: absolute;
   top: -2px;
   left: -3px;
-  background: #ccc;
 }
+
 .checkbox-example input[type=checkbox]:checked + label {
   left: 27px;
+} 
+
+
+
+
+
+
+
+
+input[type=checkbox] + label {
+  display: block;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  transition: .2s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: rgb(60, 145, 179);
+  border-color: rgb(60, 145, 179);
+  border: 0.1em solid #000;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: rgb(60, 145, 179);
+  border-color: rgb(60, 145, 179);
+}
+
+.checkMargins {
+  margin-top: -5px;
+}
+
+.salt {
+  position: fixed;
+  margin-left: 125px;
+  max-height: 20px;
+}
+
+.carousel-inner>.item>img {
+  line-height: 1;
+  margin-left: 265px;
+}
+
+h1 {
+     margin-top: 0px;
+}
+
+h3 {
+  margin-top: 0px;
+}
+
+.slow {
+  min-height: 42px;
+}
+
+.top {
+  margin-top: 15px;
+}
+
+.top1 {
+  margin-top: 10px;
+}
+
+.top2 {
+  margin-top: 20px;
+}
+
+.hat {
+  margin-top: -10px;
 }

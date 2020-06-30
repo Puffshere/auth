@@ -8,7 +8,7 @@ import Model from '../components/model';
 import Price from '../components/price';
 import Steel from '../components/steel';
 import BladeShape from '../components/bladeShape';
-import HandleMaterial from '../components/handleMaterial';
+import HandleMaterial from './handleMaterial';
 
 
 
