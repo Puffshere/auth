@@ -605,11 +605,12 @@ color: #7d9ec1;
 }
 
 .detailsStyling {
-  text-shadow: 1px 1px 1px whitesmoke;
-  color: maroon;
+  text-shadow: 1px 1px 1px #6a2424;
+  color: #898a99;
 }
+
 .detailsStyling:hover {
-  text-shadow: 1px 1px 1px whitesmoke;
+  text-shadow: 1px 1px 1px #6a2424;
   text-decoration: none;
-  color: rgb(122, 70, 70);
+  color: #f7f7f7;
 }

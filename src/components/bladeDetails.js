@@ -64,7 +64,7 @@ class BladeDetails extends Component {
                     <div className='container'>
                         {renderAllKnives}
 
-                        <Link className='detailsStyling' to='dashboard'>Return to Search</Link>
+                        <Link className='detailsStyling' to='dashboard'>Return to DashBoard</Link>
                     </div>
                 </div>
             </div>
